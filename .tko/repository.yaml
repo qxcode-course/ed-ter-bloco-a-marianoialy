@@ -1,0 +1,19 @@
+version: '0.2'
+sources:
+- name: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  quests: null
+  tasks: null
+expanded: []
+tasks: {}
+flags:
+  painel: 1
+  quests: 1
+  tracks: 0
+  tasks: 0
+  task_graph_mode: 0
+  show_time: 0
+lang: go
+selected: ''
