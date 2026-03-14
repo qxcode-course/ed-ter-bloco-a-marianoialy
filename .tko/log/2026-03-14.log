@@ -1,0 +1,22 @@
+2026-03-14 13:00:26, EXEC, v:1, k:Documentos@ed-ter-bloco-a-marianoialy, mode:FREE, size:51
+2026-03-14 19:44:43, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-14 19:44:45, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 19:44:52, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 19:44:53, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 19:44:54, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 19:55:46, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:05:47, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 20:05:48, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:06:17, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 20:06:17, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:06:32, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 20:08:28, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:08:59, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 20:09:00, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:11:38, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 20:11:40, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:11:46, EXEC, v:1, k:ed@mumia, mode:FULL, rate:55, size:23
+2026-03-14 20:12:43, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:24
+2026-03-14 20:13:35, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 20:13:35, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 20:13:36, MOVE, v:1, k:ed@mumia, mode:BACK
