@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_20-06-07",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,335 +37,32 @@\n ) %7B%0A\n-%09var n int%0A%09var a, b int%0A%09fmt.Scan(&n)%0A%09var vetor %5B100%5Dint%0A%09var menor int%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&a)%0A%09%09fmt.Scan(&b)%0A%09%09if a %3C 10 %7C%7C b %3C 10 %7B%0A%09%09%09vetor%5Bi%5D = 999999%0A%09%09%7D else %7B%0A%09%09%09vetor%5Bi%5D = a - b%0A%09%09%7D%0A%0A%09%7D%0A%09menor = vetor%5B0%5D%0A%09for j := 0; j %3C n; j++ %7B%0A%09%09if vetor%5Bj%5D %3C menor %7B%0A%09%09%09menor = vetor%5Bj%5D%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(menor\n+    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_20-06-14",
+            "content": "@@ -51,59 +51,69 @@\n nt%0A%09\n-fmt.Scan(&n)%0A%09menordif := 101%0A%09indiceganhador := -1\n+var a, b int%0A%09fmt.Scan(&n)%0A%09var vetor %5B100%5Dint%0A%09var menor int\n %0A%09fo\n@@ -139,23 +139,8 @@\n + %7B%0A\n-%09%09var a, b int%0A\n %09%09fm\n@@ -169,29 +169,26 @@\n &b)%0A\n-%0A\n %09%09if a \n-%3E=\n+%3C\n  10 \n-&& b %3E=\n+%7C%7C b %3C\n  10 \n@@ -196,274 +196,178 @@\n %0A%09%09%09\n-diferenca := a - b%0A%0A%09%09%09if diferenca %3C 0 %7B%0A%09%09%09%09diferenca = diferenca * -1%0A%0A%09%09%09%7D%0A%09%09%09if diferenca %3C menordif %7B%0A%09%09%09%09menordif = diferenca%0A%09%09%09%09indiceganhador = i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if indiceganhador == -1 %7B%0A%09%09fmt.Println(%22Sem vencedor%22)%0A%09%7D else %7B%0A%09%09fmt.Println(indiceganhador)%0A%09%7D\n+vetor%5Bi%5D = 999999%0A%09%09%7D else %7B%0A%09%09%09vetor%5Bi%5D = a - b%0A%09%09%7D%0A%0A%09%7D%0A%09menor = vetor%5B0%5D%0A%09for j := 0; j %3C n; j++ %7B%0A%09%09if vetor%5Bj%5D %3C menor %7B%0A%09%09%09menor = vetor%5Bj%5D%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(menor)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_20-16-41",
+            "content": "@@ -414,13 +414,13 @@\n ln(%22\n-sem g\n+Sem v\n ence\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_20-16-56",
+            "content": "@@ -415,20 +415,20 @@\n n(%22sem g\n-anha\n+ence\n dor%22)%0A%09%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_20-17-07",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tmenordif := 101\n\tindiceganhador := -1\n\tfor i := 0; i < n; i++ {\n\t\tvar a, b int\n\t\tfmt.Scan(&a)\n\t\tfmt.Scan(&b)\n\n\t\tif a >= 10 && b >= 10 {\n\t\t\tdiferenca := a - b\n\n\t\t\tif diferenca < 0 {\n\t\t\t\tdiferenca = diferenca * -1\n\n\t\t\t}\n\t\t\tif diferenca < menordif {\n\t\t\t\tmenordif = diferenca\n\t\t\t\tindiceganhador = i\n\t\t\t}\n\t\t}\n\t}\n\tif indiceganhador == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t} else {\n\t\tfmt.Println(indiceganhador)\n\t}\n}\n",
+            "lines": "33"
+        }
+    ]
+}

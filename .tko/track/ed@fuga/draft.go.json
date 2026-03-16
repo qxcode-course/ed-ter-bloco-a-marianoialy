@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-47-17",
+            "content": "@@ -219,16 +219,17 @@\n t.Printl\n+n\n (%22S%22)%0A%09%09\n@@ -273,16 +273,17 @@\n t.Printl\n+n\n (%22N%22)%0A%09%09\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-16_19-48-45",
+            "content": "@@ -218,17 +218,17 @@\n mt.Print\n-f\n+l\n (%22S%22)%0A%09%09\n@@ -271,17 +271,17 @@\n mt.Print\n-f\n+l\n (%22N%22)%0A%09%09\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-16_19-49-03",
+            "content": "@@ -218,18 +218,17 @@\n mt.Print\n-ln\n+f\n (%22S%22)%0A%09%09\n@@ -275,10 +275,9 @@\n rint\n-ln\n+f\n (%22N%22\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-16_19-49-23",
+            "content": "@@ -189,85 +189,8 @@\n + d%0A\n-%09%09if posicao %3C 0 %7B%0A%09%09%09posicao = 15%0A%09%09%7D%0A%09%09if posicao %3E 15 %7B%0A%09%09%09posicao = 0%0A%09%09%7D\n %0A%09%09i\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-16_19-51-41",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d, posicao int\n\tfmt.Scan(&h)\n\tfmt.Scan(&p)\n\tfmt.Scan(&f)\n\tfmt.Scan(&d)\n\tposicao = f\n\n\tfor i := 0; i < 16; i++ {\n\t\tposicao = posicao + d\n\t\tif posicao < 0 {\n\t\t\tposicao = 15\n\t\t}\n\t\tif posicao > 15 {\n\t\t\tposicao = 0\n\t\t}\n\t\tif posicao == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\treturn\n\t\t}\n\t\tif posicao == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\treturn\n\t\t}\n\t}\n}\n",
+            "lines": "30"
+        }
+    ]
+}
