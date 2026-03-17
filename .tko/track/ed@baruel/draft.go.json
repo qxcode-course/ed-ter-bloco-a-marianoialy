@@ -42,8 +42,108 @@
         },
         {
             "label": "2026-03-17_09-34-15",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar quantfig int\n\tvar quantpossui int\n\tfmt.Scan(&quantfig)\n\tfmt.Scan(&quantpossui)\n\tvetor := make([]int, quantpossui)\n\tvar repetidas int\n\tvar coladas int\n\tfor i := 0; i < quantpossui; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tfor i := 0; i < quantpossui; i++ {\n\t\tif vetor[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfor j := 0; j < quantpossui; j++ {\n\t\t\tif vetor[i] == vetor[j] {\n\t\t\t\trepetidas++\n\t\t\t\tvetor[j] = 0\n\t\t\t}\n\t\t}\n\t\tcoladas++\n\t}\n\tfmt.Println(repetidas)\n\tfmt.Println(quantfig - coladas)\n}\n",
+            "content": "@@ -155,16 +155,20 @@\n ossui)%0A%09\n+var \n repetida\n@@ -173,49 +173,24 @@\n das \n-:= make(%5B%5Dint, quantpossui)%0A%09var quantrep\n+int%0A%09var coladas\n  int\n@@ -407,204 +407,52 @@\n idas\n-%5Bquantrep%5D = vetor%5Bj%5D%0A%09%09%09%09quantrep++%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if quantrep == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09for i := quantrep; i %3C quantrep; i++ %7B%0A%09%09%09if i %3E 0 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09\n+++%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%09coladas++%0A\n %09%7D%0A\n-%09%09\n %09fmt\n@@ -457,16 +457,18 @@\n mt.Print\n+ln\n (repetid\n@@ -469,26 +469,18 @@\n epetidas\n-%5Bi%5D)%0A%09%09%7D%0A%09\n+)%0A\n %09fmt.Pri\n@@ -488,448 +488,26 @@\n tln(\n-)%0A%09%7D%0A%0A%09faltantes := make(%5B%5Dint, quantfig)%0A%09quantfalt := 0%0A%09for i := 1; i %3C= quantfig; i++ %7B%0A%09%09count := 0%0A%09%09for j := 0; j %3C quantpossui; j++ %7B%0A%09%09%09if vetor%5Bj%5D == i %7B%0A%09%09%09%09count++%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%09if count == 0 %7B%0A%09%09%09%09faltantes%5Bquantfalt%5D = i%0A%09%09%09%09quantfalt++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if quantfalt == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09for i := 0; i %3C quantfalt; i++ %7B%0A%09%09%09if i %3E 0 %7B%0A%09%09%09%09fmt.Println(%22N%22)%0A%09%09%09%7D%0A%09%09%09fmt.Println(faltantes%5Bi%5D)%0A%09%09%7D%0A%09%09fmt.Print()%0A%09%7D\n+quantfig - coladas)\n %0A%7D%0A\n",
             "lines": "30"
+        },
+        {
+            "label": "2026-03-17_10-56-00",
+            "content": "@@ -542,33 +542,40 @@\n se %7B%0A%09%09for i := \n-0\n+quantrep\n ; i %3C quantrep; \n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_10-57-12",
+            "content": "@@ -848,19 +848,16 @@\n k%0A%09%09%09%7D%0A%09\n-%09%7D%0A\n %09%09if cou\n@@ -866,16 +866,17 @@\n  == 0 %7B%0A\n+%09\n %09%09%09falta\n@@ -895,16 +895,17 @@\n lt%5D = i%0A\n+%09\n %09%09%09quant\n@@ -911,16 +911,21 @@\n tfalt++%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_10-58-03",
+            "content": "@@ -360,13 +360,9 @@\n  := \n-i + 1\n+0\n ; j \n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_10-59-26",
+            "content": "@@ -1039,17 +1039,17 @@\n rintln(%22\n- \n+N\n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_10-59-58",
+            "content": "@@ -1035,18 +1035,21 @@\n mt.Print\n+ln\n (%22\n+ \n %22)%0A%09%09%09%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_11-00-09",
+            "content": "@@ -1057,16 +1057,18 @@\n mt.Print\n+ln\n (faltant\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_11-00-25",
+            "content": "@@ -1076,13 +1076,27 @@\n i%5D)%0A%09%09%7D%0A\n+%09%09fmt.Print()%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_11-01-37",
+            "content": "@@ -1072,9 +1072,9 @@\n tes%5B\n-2\n+i\n %5D)%0A%09\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-02-18",
+            "content": "@@ -1057,18 +1057,16 @@\n mt.Print\n-ln\n (faltant\n@@ -1068,17 +1068,17 @@\n ltantes%5B\n-i\n+2\n %5D)%0A%09%09%7D%0A%09\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-02-45",
+            "content": "@@ -1035,18 +1035,16 @@\n mt.Print\n-ln\n (%22%22)%0A%09%09%09\n@@ -1057,16 +1057,18 @@\n mt.Print\n+ln\n (faltant\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-03-16",
+            "content": "@@ -1054,105 +1054,31 @@\n %0A%09%09%09\n-if i != quantfalt-1 %7B%0A%09%09%09%09fmt.Print(faltantes%5Bi%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(faltantes%5Bi%5D)%0A%09%09%09%7D%0A\n+fmt.Print(faltantes%5Bi%5D)\n %0A%09%09%7D\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-04-43",
+            "content": "@@ -1054,31 +1054,105 @@\n %0A%09%09%09\n-fmt.Print(faltantes%5Bi%5D)\n+if i != quantfalt-1 %7B%0A%09%09%09%09fmt.Print(faltantes%5Bi%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(faltantes%5Bi%5D)%0A%09%09%09%7D%0A\n %0A%09%09%7D\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-17_11-05-09",
+            "content": "@@ -1054,136 +1054,31 @@\n %0A%09%09%09\n-if faltantes %3E 0 %7B%0A%09%09%09%09if i != quantfalt-1 %7B%0A%09%09%09%09%09fmt.Print(faltantes%5Bi%5D)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Println(faltantes%5Bi%5D)%0A%09%09%09%09%7D%0A%09%09%09%7D\n+fmt.Print(faltantes%5Bi%5D)\n %0A%09%09%7D\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-06-30",
+            "content": "@@ -1063,18 +1063,17 @@\n ltantes \n-!=\n+%3E\n  0 %7B%0A%09%09%09\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-17_11-06-49",
+            "content": "@@ -1053,25 +1053,25 @@\n %7D%0A%09%09%09if \n-quantfalt\n+faltantes\n  != 0 %7B%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-17_11-07-08",
+            "content": "@@ -1054,31 +1054,137 @@\n %0A%09%09%09\n-fmt.Print(faltantes%5Bi%5D)\n+if quantfalt != 0 %7B%0A%09%09%09%09if i != quantfalt-1 %7B%0A%09%09%09%09%09fmt.Print(faltantes%5Bi%5D)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Println(faltantes%5Bi%5D)%0A%09%09%09%09%7D%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-17_11-08-10",
+            "content": "@@ -1081,25 +1081,10 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-08-32",
+            "content": "@@ -1081,10 +1081,25 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_11-08-59",
+            "content": "@@ -1027,35 +1027,36 @@\n  %7B%0A%09%09%09%09fmt.Print\n+ln\n (%22\n- \n %22)%0A%09%09%09%7D%0A%09%09%09fmt.P\n@@ -1078,29 +1078,13 @@\n i%5D)%0A%09%09%7D%0A\n-%09%09fmt.Println()%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-17_11-11-38",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar quantfig int\n\tvar quantpossui int\n\tfmt.Scan(&quantfig)\n\tfmt.Scan(&quantpossui)\n\tvetor := make([]int, quantpossui)\n\trepetidas := make([]int, quantpossui)\n\tvar quantrep int\n\tfor i := 0; i < quantpossui; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tfor i := 0; i < quantpossui; i++ {\n\t\tif vetor[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfor j := i + 1; j < quantpossui; j++ {\n\t\t\tif vetor[i] == vetor[j] {\n\t\t\t\trepetidas[quantrep] = vetor[j]\n\t\t\t\tquantrep++\n\t\t\t\tvetor[j] = 0\n\t\t\t}\n\t\t}\n\t}\n\tif quantrep == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i := 0; i < quantrep; i++ {\n\t\t\tif i > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(repetidas[i])\n\t\t}\n\t\tfmt.Println()\n\t}\n\n\tfaltantes := make([]int, quantfig)\n\tquantfalt := 0\n\tfor i := 1; i <= quantfig; i++ {\n\t\tcount := 0\n\t\tfor j := 0; j < quantpossui; j++ {\n\t\t\tif vetor[j] == i {\n\t\t\t\tcount++\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t\tif count == 0 {\n\t\t\tfaltantes[quantfalt] = i\n\t\t\tquantfalt++\n\t\t}\n\t}\n\tif quantfalt == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i := 0; i < quantfalt; i++ {\n\t\t\tif i > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(faltantes[i])\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "66"
         }
     ]
 }

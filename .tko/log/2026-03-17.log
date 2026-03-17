@@ -126,3 +126,34 @@
 2026-03-17 10:27:33, MOVE, v:1, k:ed@gomos, mode:PICK
 2026-03-17 10:27:34, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:5
 2026-03-17 10:27:35, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-17 10:55:57, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-17 10:56:00, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:66
+2026-03-17 10:57:12, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:66
+2026-03-17 10:58:03, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:66
+2026-03-17 10:59:26, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:66
+2026-03-17 10:59:58, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:66
+2026-03-17 11:00:09, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:66
+2026-03-17 11:00:25, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:66
+2026-03-17 11:01:37, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:65
+2026-03-17 11:02:18, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:65
+2026-03-17 11:02:45, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:65
+2026-03-17 11:03:16, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:65
+2026-03-17 11:04:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:70
+2026-03-17 11:05:09, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:65
+2026-03-17 11:06:30, EXEC, v:1, k:ed@baruel, mode:FULL, size:71, fail:COMP
+2026-03-17 11:06:49, EXEC, v:1, k:ed@baruel, mode:FULL, size:71, fail:COMP
+2026-03-17 11:06:50, EXEC, v:1, k:ed@baruel, mode:FULL, fail:COMP
+2026-03-17 11:06:50, EXEC, v:1, k:ed@baruel, mode:FULL, fail:COMP
+2026-03-17 11:06:50, EXEC, v:1, k:ed@baruel, mode:FULL, fail:COMP
+2026-03-17 11:06:50, EXEC, v:1, k:ed@baruel, mode:FULL, fail:COMP
+2026-03-17 11:07:08, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:71
+2026-03-17 11:08:10, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:65
+2026-03-17 11:08:32, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:66
+2026-03-17 11:08:59, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:65
+2026-03-17 11:11:38, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:66
+2026-03-17 11:11:48, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-17 11:12:04, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-17 11:12:06, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-03-17 11:13:04, SELF, v:1, k:ed@baruel, self:1, rate:100, study:80, code:1, debug:1
+2026-03-17 11:13:05, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-03-17 11:13:07, MOVE, v:1, k:ed@baruel, mode:BACK
