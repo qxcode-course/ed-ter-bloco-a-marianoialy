@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_08-32-37",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -47,17 +47,20 @@\n r n int%0A\n-%09\n+    \n fmt.Scan\n@@ -68,34 +68,33 @@\n &n)%0A\n-%09vetor := make(%5B%5Dint, n)%0A%09\n+    var vetor%5Bn%5D int%0A    \n var \n@@ -100,30 +100,29 @@\n  contneg int\n- = 0%0A%09\n+%0A    \n var contpos \n@@ -124,22 +124,21 @@\n tpos int\n- = 0%0A%09\n+%0A    \n var resu\n@@ -147,41 +147,42 @@\n  int\n- = 0%0A%09\n+%0A    \n for i\n- \n := 0\n-; i %3C \n+, i%3C\n n; i++\n- \n %7B%0A\n-%09%09\n+        \n fmt.\n@@ -201,42 +201,50 @@\n i%5D)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n for i\n- \n := 0\n-; i %3C \n+, i%3C\n n; i++\n- \n %7B%0A\n-%09%09if \n+        if(\n veto\n@@ -255,62 +255,86 @@\n  %3C 0\n+)\n  %7B%0A\n-%09%09%09contneg++%0A%09%09%7D%0A%09%7D%0A%09\n+            contneg++%0A        %7D%0A    %7D%0A    \n for i\n- \n := 0\n-; i %3C \n+, i%3C\n n; i++\n- \n %7B%0A\n-%09%09if \n+        if(\n veto\n@@ -346,32 +346,55 @@\n %3E= 0\n+)\n  %7B%0A\n-%09%09%09\n+            \n cont\n+n\n pos++%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n resu\n@@ -409,19 +409,17 @@\n tpos\n- + \n++\n contneg%0A\n %09if \n@@ -418,30 +418,41 @@\n neg%0A\n-%09if \n+    if(\n result\n-%25\n+ %25 \n 2 == 1\n- %7B%0A%09%09\n+)%7B%0A        \n resu\n@@ -477,20 +477,27 @@\n / 2%0A\n-%09%7D \n+    %7D\n else\n- \n %7B%0A\n-%09%09\n+        \n resu\n@@ -516,12 +516,18 @@\n / 2%0A\n-%09%7D%0A%09\n+    %7D%0A    \n fmt.\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_08-34-58",
+            "content": "@@ -85,16 +85,58 @@\n int, n)%0A\n+%09var contneg int = 0%0A%09var contpos int = 0%0A\n %09var res\n@@ -230,13 +230,52 @@\n %7B%0A%09%09\n-for j\n+if vetor%5Bi%5D %3C 0 %7B%0A%09%09%09contneg++%0A%09%09%7D%0A%09%7D%0A%09for i\n  := \n@@ -288,15 +288,14 @@\n  n; \n-j\n+i\n ++ %7B%0A\n-%09\n %09%09if\n@@ -308,83 +308,146 @@\n %5Bi%5D \n-== -vetor%5Bj%5D %7B%0A%09%09%09%09result++%0A%09%09%09%09vetor%5Bi%5D = 0%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D\n+%3E= 0 %7B%0A%09%09%09contpos++%0A%09%09%7D%0A%09%7D%0A%09result = contpos + contneg%0A%09if result%252 == 1 %7B%0A%09%09result = (result - 1) / 2%0A%09%7D else %7B%0A%09%09result = result / 2\n %0A%09%7D%0A\n-%0A\n %09fmt\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-17_08-41-46",
+            "content": "@@ -1,326 +1,1639 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%09vetor := make(%5B%5Dint, n)%0A%09var result int%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&vetor%5Bi%5D)%0A%09%7D%0A%09for i := 0; j %3C n; i++ %7B%0A%09%09for j := 0; i %3C n; j++ %7B%0A%09%09%09if vetor%5Bi%5D == -vetor%5Bj%5D %7B%0A%09%09%09%09result++%0A%09%09%09%09vetor%5Bi%5D = 0%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%7D%0A%0A%09fmt.Println(result)%0A%7D\n+@@ -1,8 +1,28 @@%0A+@@ -1,325 +1,52 @@%250A-%0A package %0A@@ -29,24 +29,36 @@%0A main%0A-%250A%250A%0A+%25250A%25250A%0A import %0A-%2522fmt%2522%250A%250A%0A+%252522fmt%252522%25250A%25250A%0A func%0A@@ -65,19 +65,25 @@%0A  main() %0A-%257B%250A%2509%0A+%25257B%25250A%252509%0A var n in%0A@@ -83,18 +83,22 @@%0A ar n int%0A-%250A%2509%0A+%25250A%252509%0A fmt.Scan%0A@@ -101,18 +101,22 @@%0A Scan(&n)%0A-%250A%2509%0A+%25250A%252509%0A vetor :=%0A@@ -125,19 +125,27 @@%0A ake(%0A-%255B%255D%0A+%25255B%25255D%0A int, n)%0A-%250A%2509%0A+%25250A%252509%0A var %0A@@ -154,18 +154,22 @@%0A sult int%0A-%250A%2509%0A+%25250A%252509%0A for i :=%0A@@ -170,33 +170,35 @@%0A r i := 0; i %0A-%253C%0A+%25253C%0A  n; i++ %0A %257B%250A%2509%2509fmt.Scan%0A@@ -185,20 +185,28 @@%0A  n; i++ %0A-%257B%250A%2509%2509%0A+%25257B%25250A%252509%252509%0A fmt.Scan%0A@@ -216,17 +216,31 @@%0A etor%0A-%255Bi%255D)%250A%2509%257D%250A%2509%0A+%25255Bi%25255D)%25250A%252509%25257D%25250A%252509%0A for %0A@@ -253,17 +253,19 @@%0A ; i %0A-%253C%0A+%25253C%0A  n; i++ %0A %257B%250A%2509%2509%0A@@ -260,20 +260,28 @@%0A  n; i++ %0A-%257B%250A%2509%2509%0A+%25257B%25250A%252509%252509%0A for j :=%0A@@ -290,17 +290,19 @@%0A ; i %0A-%253C%0A+%25253C%0A  n; j++ %0A %257B%250A%2509%2509%0A@@ -301,21 +301,31 @@%0A j++ %0A-%257B%250A%2509%2509%2509%0A+%25257B%25250A%252509%252509%252509%0A if vetor%0A %255Bi%255D %0A@@ -320,19 +320,23 @@%0A if vetor%0A-%255Bi%255D%0A+%25255Bi%25255D%0A  == -vet%0A@@ -341,93 +341,239 @@%0A etor%0A-%255Bj%255D %257B%250A%2509%2509%2509%2509result++%250A%2509%2509%2509%2509vetor%255Bi%255D = 0%250A%2509%2509%2509%2509vetor%255Bj%255D = 0%250A%2509%2509%2509%257D%250A%2509%2509%257D%250A%2509%257D%250A%250A%2509fmt.Println(result)%250A%257D%0A+%25255Bj%25255D %25257B%25250A%252509%252509%252509%252509result++%25250A%252509%252509%252509%252509vetor%25255Bi%25255D = 0%25250A%252509%252509%252509%252509vetor%25255Bj%25255D = 0%25250A%252509%252509%252509%25257D%25250A%252509%252509%25257D%25250A%252509%25257D%25250A%25250A%252509fmt.Println(result)%25250A%25257D%250A+@@ -100,16 +100,20 @@%25250A sult int%25250A+ = 0%25250A %2525250A%25252509for i %250A %25250A%0A %250A\n %0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-17_08-43-31",
+            "content": "@@ -157,33 +157,33 @@\n %09%7D%0A%09for i := 0; \n-i\n+j\n  %3C n; i++ %7B%0A%09%09fo\n@@ -188,25 +188,25 @@\n for j := 0; \n-j\n+i\n  %3C n; j++ %7B%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-17_08-43-43",
+            "content": "@@ -217,17 +217,17 @@\n f vetor%5B\n-j\n+i\n %5D == -ve\n@@ -230,17 +230,17 @@\n  -vetor%5B\n-i\n+j\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-17_08-44-32",
+            "content": "@@ -286,19 +286,8 @@\n = 0%0A\n-%09%09%09%09break%0A%0A\n %09%09%09%7D\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-17_08-44-53",
+            "content": "@@ -182,45 +182,8 @@\n + %7B%0A\n-%09%09if vetor%5Bi%5D == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A\n %09%09fo\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_08-45-34",
+            "content": "@@ -318,16 +318,26 @@\n r%5Bj%5D = 0\n+%0A%09%09%09%09break\n %0A%0A%09%09%09%7D%0A%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_08-46-14",
+            "content": "@@ -323,17 +323,8 @@\n = 0%0A\n-%09%09%09%09break\n %0A%09%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-17_08-46-30",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tvetor := make([]int, n)\n\tvar result int\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tfor i := 0; i < n; i++ {\n\t\tif vetor[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif vetor[j] == -vetor[i] {\n\t\t\t\tresult++\n\t\t\t\tvetor[i] = 0\n\t\t\t\tvetor[j] = 0\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\n\t}\n\n\tfmt.Println(result)\n}\n",
+            "lines": "29"
+        }
+    ]
+}
