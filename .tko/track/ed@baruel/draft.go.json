@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_09-11-09",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,549 +37,32 @@\n ) %7B%0A\n-%09var quantfig int%0A%09var quantpossui int%0A%09fmt.Scan(quantfig)%0A%09fmt.Scan(&quantpossui)%0A%09vetor := make(%5B%5Dint, quantpossui)%0A%09var repetidas int%0A%09var coladas int%0A%09for i := 0; i %3C quantpossui; i++ %7B%0A%09%09fmt.Scan(&vetor%5Bi%5D)%0A%09%7D%0A%09for i := 0; i %3C= quantpossui; i++ %7B%0A%09%09for j := 0; i %3C= quantpossui; j++ %7B%0A%09%09%09if vetor%5Bi%5D == vetor%5Bj%5D %7B%0A%09%09%09%09repetidas++%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C quantfig; i++ %7B%0A%09%09for j := 0; j %3C quantfig; j++ %7B%0A%09%09%09if vetor%5Bi%5D == vetor%5Bj%5D %7B%0A%09%09%09%09coladas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(repetidas)%0A%09fmt.Println(quantfig - coladas\n+    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_09-26-32",
+            "content": "@@ -258,32 +258,33 @@\n %09for i := 0; i %3C\n+=\n  quantpossui; i+\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-17_09-26-59",
+            "content": "@@ -512,25 +512,8 @@\n s++%0A\n-%09%09%09%09vetor%5Bi%5D = 0%0A\n %09%09%09%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-17_09-28-04",
+            "content": "@@ -80,25 +80,24 @@\n t%0A%09fmt.Scan(\n-&\n quantfig)%0A%09f\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_09-30-35",
+            "content": "@@ -301,17 +301,17 @@\n j := 0; \n-j\n+i\n  %3C= quan\n@@ -399,17 +399,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %09for i :\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_09-31-06",
+            "content": "@@ -300,24 +300,25 @@\n  j := 0; j %3C\n+=\n  quantpossui\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_09-31-23",
+            "content": "@@ -413,38 +413,35 @@\n  := 0; i %3C quant\n-possui\n+fig\n ; i++ %7B%0A%09%09for j \n@@ -447,38 +447,35 @@\n  := 0; j %3C quant\n-possui\n+fig\n ; j++ %7B%0A%09%09%09if ve\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_09-32-07",
+            "content": "@@ -293,42 +293,153 @@\n %7B%0A%09%09\n-if vetor%5Bi%5D == 0 %7B%0A%09%09%09continue%0A%09%09%7D\n+for j := 0; j %3C quantpossui; j++ %7B%0A%09%09%09if vetor%5Bi%5D == vetor%5Bj%5D %7B%0A%09%09%09%09repetidas++%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C quantpossui; i++ %7B\n %0A%09%09f\n@@ -497,38 +497,36 @@\n  vetor%5Bj%5D %7B%0A%09%09%09%09\n-repeti\n+cola\n das++%0A%09%09%09%09vetor%5B\n@@ -517,33 +517,33 @@\n das++%0A%09%09%09%09vetor%5B\n-j\n+i\n %5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09\n@@ -541,28 +541,16 @@\n %09%09%7D%0A%09%09%7D%0A\n-%09%09coladas++%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_09-34-15",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar quantfig int\n\tvar quantpossui int\n\tfmt.Scan(&quantfig)\n\tfmt.Scan(&quantpossui)\n\tvetor := make([]int, quantpossui)\n\tvar repetidas int\n\tvar coladas int\n\tfor i := 0; i < quantpossui; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tfor i := 0; i < quantpossui; i++ {\n\t\tif vetor[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfor j := 0; j < quantpossui; j++ {\n\t\t\tif vetor[i] == vetor[j] {\n\t\t\t\trepetidas++\n\t\t\t\tvetor[j] = 0\n\t\t\t}\n\t\t}\n\t\tcoladas++\n\t}\n\tfmt.Println(repetidas)\n\tfmt.Println(quantfig - coladas)\n}\n",
+            "lines": "30"
+        }
+    ]
+}
