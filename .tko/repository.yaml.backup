@@ -14,12 +14,12 @@ sources:
   quests: null
   tasks: null
 expanded:
-- '@ed@analise-map_set-map_set-basic_sem_quest'
-- ed@analise-map_set-map_set-basic
-- '@ed@revisao-basic-basic_sem_quest'
 - sandbox@sandbox:00_rascunhos
-- '@ed@recursao-recursion-rec-basic_sem_quest'
+- '@ed@analise-map_set-map_set-basic_sem_quest'
 - ed@revisao-basic-basic
+- '@ed@recursao-recursion-rec-basic_sem_quest'
+- '@ed@revisao-basic-basic_sem_quest'
+- ed@analise-map_set-map_set-basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:25, concept:1}'
   ed@mumia: '{self:1, rate:100, study:25, concept:1, debug:1}'
@@ -28,7 +28,9 @@ tasks:
   ed@casais: '{self:1, rate:100, study:25, code:1}'
   ed@baruel: '{self:1, rate:100, study:80, code:1, debug:1}'
   ed@gomos: '{self:1, rate:100, code:1}'
-  ed@apagando: '{self:1, rate:100, study:30, friend:nao , code:1}'
+  ed@princesa: '{self:1, rate:100, concept:1, code:1}'
+  ed@apagando: '{self:1, rate:100, study:30, friend:nao, code:1}'
+  ed@manipulacao: '{self:1, rate:80, concept:1, code:1}'
 flags:
   painel: 0
   quests: 0
@@ -37,4 +39,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@manipulacao
+selected: ed@princesa
