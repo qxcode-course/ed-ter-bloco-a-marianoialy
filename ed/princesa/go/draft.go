@@ -1,23 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
-	var a float64
-	var b float64
-	var c float64
-	var p float64
-	var result float64
-
-	fmt.Scan(&a)
-	fmt.Scan(&b)
-	fmt.Scan(&c)
-
-	p = (a + b + c) / 2
-	result = math.Sqrt(p * (p - a) * (p - b) * (p - c))
-
-	fmt.Printf("%.2f\n", result)
+	var n int
+	fmt.Scan(&n)
+	var e int
+	fmt.Scan(&e)
+	vetor := make([]int, n)
+	for i := 0; i < n; i++ {
+		vetor[i] = i + 1
+	}
 }

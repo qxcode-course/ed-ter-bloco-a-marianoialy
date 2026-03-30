@@ -1,0 +1,20 @@
+2026-03-24 10:38:54, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-24 10:40:22, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-24 10:40:30, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-24 10:41:06, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:23
+2026-03-24 10:41:06, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:23
+2026-03-24 10:41:07, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:23
+2026-03-24 10:41:09, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-24 10:41:23, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-24 10:41:28, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-24 10:43:33, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-24 10:43:34, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-24 11:11:34, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:32
+2026-03-24 11:12:07, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:32
+2026-03-24 11:12:09, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-24 11:12:09, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-24 11:12:53, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:33
+2026-03-24 11:12:54, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-24 11:12:54, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-24 11:14:49, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:33
+2026-03-24 11:16:23, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:33
