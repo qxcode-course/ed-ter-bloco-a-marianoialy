@@ -14,12 +14,12 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisao-basic-basic
-- sandbox@sandbox:00_rascunhos
-- ed@analise-map_set-map_set-basic
-- '@ed@analise-map_set-map_set-basic_sem_quest'
 - '@ed@revisao-basic-basic_sem_quest'
+- sandbox@sandbox:00_rascunhos
+- '@ed@analise-map_set-map_set-basic_sem_quest'
 - '@ed@recursao-recursion-rec-basic_sem_quest'
+- ed@revisao-basic-basic
+- ed@analise-map_set-map_set-basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:25, concept:1}'
   ed@mumia: '{self:1, rate:100, study:25, concept:1, debug:1}'
@@ -39,4 +39,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@analise
+selected: ed@busca-em-profundidade-dfs4-dfs-tree

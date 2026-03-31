@@ -37,8 +37,13 @@
         },
         {
             "label": "2026-03-30_15-04-24",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n, m int\n\tfmt.Scan(&n)\n\tvetor := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tfmt.Scan(&m)\n\tsaiu := make([]int, m)\n\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&saiu[i])\n\t}\n\tficou := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tficou[i] = vetor[i]\n\t\tfor j := 0; j < m; j++ {\n\t\t\tif vetor[i] == saiu[j] {\n\t\t\t\tficou[i] = 0\n\t\t\t}\n\t\t}\n\t}\n\tfor i := 0; i < n; i++ {\n\t\tif (ficou[i]) == 0 {\n\t\t\tcontinue\n\t\t} else {\n\t\t\tfmt.Print(ficou[i], \" \")\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "content": "@@ -508,11 +508,10 @@\n intln()%0A\n-%0A\n %7D%0A\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-03-31_10-53-20",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n, m int\n\tfmt.Scan(&n)\n\tvetor := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tfmt.Scan(&m)\n\tsaiu := make([]int, m)\n\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&saiu[i])\n\t}\n\tficou := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tficou[i] = vetor[i]\n\t\tfor j := 0; j < m; j++ {\n\t\t\tif vetor[i] == saiu[j] {\n\t\t\t\tficou[i] = 0\n\t\t\t}\n\t\t}\n\t}\n\tfor i := 0; i < n; i++ {\n\t\tif (ficou[i]) == 0 {\n\t\t\tcontinue\n\t\t} else {\n\t\t\tfmt.Print(ficou[i], \" \")\n\t\t}\n\t}\n\tfmt.Println()\n\n}\n",
+            "lines": "37"
         }
     ]
 }
