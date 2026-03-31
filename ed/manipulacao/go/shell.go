@@ -100,28 +100,15 @@ func unique(vet []int) []int {
 }
 
 func repeated(vet []int) []int {
-	repetido := []int{}
-	for i := 0; i < len(vet); i++ {
-		count := 0
-		for j := 0; j < len(vet); j++ {
-			if vet[i] == vet[j] {
-				count++
-			}
+	repetido := map[int]bool{}
+	result := []int{}
+	for _, v := range vet {
+		if repetido[v] {
+			result = append(result, v)
 		}
-		if count > 1 {
-			tem := false
-			for k := 0; k < len(repetido); k++ {
-				if vet[i] == repetido[k] {
-					tem = true
-					break
-				}
-			}
-			if !tem {
-				repetido = append(repetido, vet[i])
-			}
-		}
+		repetido[v] = true
 	}
-	return repetido
+	return result
 }
 
 func main() {
