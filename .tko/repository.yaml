@@ -32,7 +32,7 @@ tasks:
   ed@resto: '{rate:100}'
   ed@mdc: '{rate:100}'
   ed@eh_primo: '{rate:100}'
-  ed@vetequals: '{rate:70}'
+  ed@vetequals: '{rate:100}'
   ed@especiais: '{}'
   ed@buscas: '{}'
   ed@rotacoes: '{}'
@@ -112,4 +112,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetequals
+selected: ed@queimada
