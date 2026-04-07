@@ -23,3 +23,41 @@
 2026-04-07 08:38:36, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
 2026-04-07 08:38:45, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
 2026-04-07 08:38:45, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-07 10:02:27, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 10:03:27, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:35, concept:1, problem:1
+2026-04-07 10:03:29, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-07 10:03:31, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-07 10:03:54, SELF, v:1, k:ed@treinando, self:1, rate:100, concept:1, code:1
+2026-04-07 10:04:04, SELF, v:1, k:ed@treinando, self:1, rate:100, study:50, concept:1, code:1
+2026-04-07 10:04:05, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
+2026-04-07 10:04:06, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-07 10:04:10, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-07 10:04:27, SELF, v:1, k:ed@resto, self:1, rate:100, study:15, concept:1
+2026-04-07 10:04:29, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-07 10:04:32, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-07 10:04:44, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-07 10:04:46, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-07 10:05:24, SELF, v:1, k:ed@mdc, self:1, rate:100, study:20, debug:1
+2026-04-07 10:05:25, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
+2026-04-07 10:05:26, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-07 10:05:27, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-07 10:05:42, SELF, v:1, k:ed@queimada, self:1, rate:100, study:25, guided:1
+2026-04-07 10:05:43, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
+2026-04-07 10:05:44, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-04-07 10:05:49, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-07 10:06:15, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:15, concept:1
+2026-04-07 10:06:16, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-04-07 10:06:17, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-07 10:06:23, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 10:06:43, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:25, concept:1, code:1
+2026-04-07 10:06:44, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 10:06:57, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 10:07:05, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:35, concept:1, code:1
+2026-04-07 10:07:07, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-07 10:07:30, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-07 10:08:03, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-07 10:08:05, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-07 10:08:10, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:15, concept:1, problem:1
+2026-04-07 10:08:11, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-07 10:08:25, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-07 10:08:33, MOVE, v:1, k:ed@queimada, mode:BACK
