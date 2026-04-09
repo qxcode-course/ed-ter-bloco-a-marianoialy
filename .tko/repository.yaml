@@ -34,6 +34,7 @@ tasks:
   ed@queimada: '{self:1, rate:100, study:25, guided:1}'
   ed@eh_primo: '{self:1, rate:100, study:15, concept:1, problem:1}'
   ed@vetequals: '{self:1, rate:100, study:25, concept:1, code:1}'
+  ed@fractais_png: '{self:1, guided:1}'
   ed@especiais: '{}'
   ed@buscas: '{}'
   ed@rotacoes: '{}'
@@ -53,8 +54,6 @@ tasks:
   ed@fib2: '{}'
   ed@santo: '{}'
   ed@bitcoin: '{}'
-  ed@fractais_png: '{}'
-  ed@fractais: '{}'
   ed@wordsearch: '{}'
   ed@subset_sum: '{}'
   ed@distancia: '{}'
@@ -112,4 +111,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@queimada
+selected: ed@tree

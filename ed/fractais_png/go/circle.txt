@@ -1,16 +1,5 @@
 package main
 
-func desenharCirculo(pen *Pen, r float64) {
-	passos := 36
-	angulo := 360.0 / float64(passos)
-
-	for i := 0; i < passos; i++ {
-
-		pen.Walk(2 * 3.14 * r / float64(passos))
-		pen.Right(angulo)
-
-	}
-}
 func fractal(pen *Pen, r float64, nivel int) {
 	if nivel == 0 {
 		return
