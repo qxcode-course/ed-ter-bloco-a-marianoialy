@@ -1,0 +1,59 @@
+package main
+
+import (
+	"math"
+)
+
+func quadradoFractal(pen *Pen, tamanho float64, nivel int) {
+	if nivel == 0 {
+		return
+	}
+
+	metade := tamanho / 2
+
+	pen.Up()
+	pen.Walk(-metade)
+	pen.Left(90)
+	pen.Walk(metade)
+	pen.Right(90)
+	pen.Down()
+
+	for i := 0; i < 4; i++ {
+		pen.Walk(tamanho)
+		pen.Right(90)
+	}
+
+	pen.Up()
+	pen.Walk(metade)
+	pen.Right(90)
+	pen.Walk(metade)
+	pen.Left(90)
+
+	novoTamanho := tamanho * 0.45
+	distanciaDestaque := metade * math.Sqrt(2)
+
+	for i := 0; i < 4; i++ {
+		pen.Up()
+		pen.Right(45)
+		pen.Walk(distanciaDestaque)
+		pen.Left(45)
+
+		quadradoFractal(pen, novoTamanho, nivel-1)
+
+		pen.Up()
+		pen.Right(45)
+		pen.Walk(-distanciaDestaque)
+		pen.Left(45)
+
+		pen.Right(90)
+	}
+}
+
+func main() {
+	pen := NewPen(1000, 1000)
+	pen.SetPosition(500, 500)
+
+	quadradoFractal(pen, 400, 7)
+
+	pen.SavePNG("tree.png")
+}
