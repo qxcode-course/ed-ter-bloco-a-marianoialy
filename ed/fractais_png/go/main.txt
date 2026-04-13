@@ -1,0 +1,39 @@
+package main
+
+func desenhaQuadrado(pen *Pen, lado float64) {
+
+	for i := 0; i < 4; i++ {
+		pen.Walk(lado)
+		pen.Right(90)
+	}
+}
+
+func fractal(pen *Pen, x, y, lado float64, nivel int) {
+	if nivel == 0 {
+		return
+	}
+	pen.SetRGB(30, 30, 30)
+	pen.SetPosition(x, y)
+	desenhaQuadrado(pen, lado)
+	novo := lado / 3
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+
+			if i == 1 && j == 1 {
+				continue
+			}
+
+			fractal(pen, x+float64(i)*novo, y+float64(j)*novo, novo, nivel-1)
+		}
+	}
+}
+
+func main() {
+	pen := NewPen(1100, 1100)
+	pen.SetHeading(0)
+
+	fractal(pen, 0, 0, 1100, 7)
+
+	pen.SavePNG("tree.png")
+}

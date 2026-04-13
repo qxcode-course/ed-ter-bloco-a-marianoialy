@@ -1,36 +1,30 @@
 package main
 
-func desenhaTriangulo(pen *Pen, lado float64) {
-	for i := 0; i < 3; i++ {
-		pen.Walk(lado)
-		pen.Right(120)
-	}
-}
-
-func fractal(pen *Pen, r float64, nivel int) {
+func fractal(pen *Pen, tamanho float64, nivel int) {
 	if nivel == 0 {
 		return
 	}
-	desenhaTriangulo(pen, r)
 
-	for i := 0; i < 3; i++ {
-		fractal(pen, r*0.5, nivel-1)
-		pen.Up()
-		pen.Walk(r)
-		pen.Right(120)
+	pen.Walk(tamanho)
 
-		pen.Down()
+	for i := 0; i < 6; i++ {
+
+		pen.Right(60)
+		fractal(pen, tamanho*0.5, nivel-1)
+		pen.Left(60)
 
 	}
+
+	pen.Walk(-tamanho)
 }
 
 func main() {
-	pen := NewPen(1500, 1500)
+	pen := NewPen(1200, 1200)
 
-	pen.SetHeading(0)
-	pen.SetPosition(300, 300)
+	pen.SetHeading(90)
+	pen.SetPosition(600, 600)
 
-	fractal(pen, 1000, 10)
+	fractal(pen, 200, 5)
 
 	pen.SavePNG("tree.png")
 }
