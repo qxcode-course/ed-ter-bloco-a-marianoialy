@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-47-30",
+            "content": "@@ -1,45 +1,38 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A%09\n+@@ -37,382 +37,6 @@%0A ) %257B%250A%0A-%2509\n var \n@@ -32,26 +32,30 @@\n %2509var n int\n-%0A%09\n+%250A%2509\n fmt.Scan(&n)\n@@ -54,18 +54,22 @@\n Scan(&n)\n-%0A%09\n+%250A%2509\n vetor :=\n@@ -78,19 +78,27 @@\n ake(\n-%5B%5D\n+%255B%255D\n int, n)\n-%0A%09\n+%250A%2509\n for \n@@ -103,33 +103,35 @@\n r i := 0; i \n-%3C\n+%253C\n  n; i++ \n %7B%0A%09%09fmt.Scan\n@@ -110,36 +110,44 @@\n 0; i %253C n; i++ \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n fmt.Scan(&vetor%5B\n@@ -145,25 +145,39 @@\n n(&vetor\n-%5Bi%5D)%0A%09%7D%0A%09\n+%255Bi%255D)%250A%2509%257D%250A%2509\n var m in\n@@ -177,18 +177,22 @@\n ar m int\n-%0A%09\n+%250A%2509\n fmt.Scan\n@@ -195,18 +195,22 @@\n Scan(&m)\n-%0A%09\n+%250A%2509\n deixou :\n@@ -220,19 +220,27 @@\n ake(\n-%5B%5D\n+%255B%255D\n int, m)\n-%0A%09\n+%250A%2509\n for \n@@ -245,33 +245,35 @@\n r i := 0; i \n-%3C\n+%253C\n  n; i++ \n %7B%0A%09%09fmt.Scan\n@@ -260,20 +260,28 @@\n  n; i++ \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n fmt.Scan\n@@ -292,17 +292,31 @@\n ixou\n-%5Bi%5D)%0A%09%7D%0A%09\n+%255Bi%255D)%250A%2509%257D%250A%2509\n for \n@@ -329,17 +329,19 @@\n ; i \n-%3C\n+%253C\n  n; i++ \n %7B%0A%09%09\n@@ -340,36 +340,58 @@\n i++ \n-%7B%0A%09%09for j :=;j %3C m; j++%7B%0A%09%09%09\n+%257B%250A%2509%2509for j := + j %253C m; j++%257B%250A%2509%2509%2509\n if v\n@@ -395,19 +395,23 @@\n f vetor \n-%5Bi%5D\n+%255Bi%255D\n  == deix\n@@ -416,34 +416,54 @@\n ixou\n-%5Bj%5D%7B%0A%09%09%09%09vetor %5Bi%5D\n+%255Bj%255D%257B%250A%2509%2509%2509%2509vetor %255Bi%255D\n  = vetor\n %5Bi +\n@@ -462,29 +462,61 @@\n etor\n-%5B\n+%255B\n i + 1\n-%5D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n+%255D%250A%2509%2509%2509%257D%250A%2509%2509%257D%250A%2509%257D%250A%2509\n for \n@@ -529,20 +529,30 @@\n ; i \n-%3C\n+%253C\n  n; i++\n-%7B%0A%09%09\n+%257B%250A%2509%2509\n fmt.\n@@ -566,14 +566,33 @@\n etor\n-%5Bi%5D)%0A%09%7D%0A%7D\n+%255Bi%255D)%250A%2509%257D%250A%0A %257D%250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_10-55-13",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -273,20 +273,17 @@\n for j :=\n- 0; \n+;\n j %3C m; j\n@@ -284,17 +284,16 @@\n %3C m; j++\n- \n %7B%0A%09%09%09if \n@@ -293,24 +293,25 @@\n %0A%09%09%09if vetor\n+ \n %5Bi%5D == deixo\n@@ -314,17 +314,16 @@\n eixou%5Bj%5D\n- \n %7B%0A%09%09%09%09ve\n@@ -325,16 +325,17 @@\n %09%09%09vetor\n+ \n %5Bi%5D = ve\n@@ -339,17 +339,19 @@\n  vetor%5Bi\n-+\n+ + \n 1%5D%0A%09%09%09%7D%0A\n@@ -372,33 +372,32 @@\n := 0; i %3C n; i++\n- \n %7B%0A%09%09fmt.Print(ve\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_10-55-22",
+            "content": "@@ -352,83 +352,8 @@\n +1%5D%0A\n-%09%09%09%09vetor%5Bi+1%5D = 0%0A%09%09%09%09if vetor%5Bi%5D == 0 %7B%0A%09%09%09%09%09vetor%5Bi%5D = vetor%5Bi+1%5D%0A%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_10-58-36",
+            "content": "@@ -337,17 +337,101 @@\n or%5Bi%5D = \n-0\n+vetor%5Bi+1%5D%0A%09%09%09%09vetor%5Bi+1%5D = 0%0A%09%09%09%09if vetor%5Bi%5D == 0 %7B%0A%09%09%09%09%09vetor%5Bi%5D = vetor%5Bi+1%5D%0A%09%09%09%09%7D\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-14_11-01-22",
+            "content": "@@ -351,16 +351,43 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09for i := 0; i %3C n; i++ %7B%0A%09\n %09fmt.Pri\n@@ -399,10 +399,13 @@\n tor%5B\n-1\n+i\n %5D)%0A\n+%09%7D%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_11-02-35",
+            "content": "@@ -191,33 +191,8 @@\n  m)%0A\n-%09teste := make(%5B%5Dint, m)%0A\n %09for\n@@ -330,20 +330,20 @@\n %09%09%09%09\n-teste%5B1\n+vetor%5Bi\n %5D = \n-2\n+0\n %0A%09%09%09\n@@ -366,13 +366,13 @@\n int(\n-teste\n+vetor\n %5B1%5D)\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_11-03-11",
+            "content": "@@ -187,16 +187,41 @@\n int, m)%0A\n+%09teste := make(%5B%5Dint, m)%0A\n %09for i :\n@@ -355,91 +355,52 @@\n %09%09%09%09\n-vetor%5Bi%5D = vetor%5Bi+1%5D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Print(vetor%5Bi%5D)%0A%09%7D\n+teste%5B1%5D = 2%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09fmt.Print(teste%5B1%5D)\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-04-21",
+            "content": "@@ -256,17 +256,138 @@\n  0; i %3C \n-m\n+n; i++ %7B%0A%09%09for j := 0; j %3C m; j++ %7B%0A%09%09%09if vetor%5Bi%5D == deixou%5Bj%5D %7B%0A%09%09%09%09vetor%5Bi%5D = vetor%5Bi+1%5D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C n\n ; i++ %7B%0A\n@@ -398,22 +398,21 @@\n t.Print(\n-deixou\n+vetor\n %5Bi%5D)%0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_11-05-29",
+            "content": "@@ -260,140 +260,9 @@\n i %3C \n-n; i++ %7B%0A%09%09for j := 0; j %3C m; j++ %7B%0A%09%09%09if vetor%5Bi%5D == deixou%5Bj%5D %7B%0A%09%09%09%09vetor%5Bi%5D = vetor%5Bi+1%5D%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C n\n+m\n ; i+\n@@ -277,21 +277,22 @@\n t.Print(\n-vetor\n+deixou\n %5Bi%5D)%0A%09%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-14_11-06-15",
+            "content": "@@ -352,27 +352,8 @@\n +1%5D%0A\n-%09%09%09%09vetor%5Bi+1%5D = 0%0A\n %09%09%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-42-04",
+            "content": "@@ -347,12 +347,31 @@\n tor%5B\n-j+1%5D\n+i+1%5D%0A%09%09%09%09vetor%5Bi+1%5D = 0\n %0A%09%09%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_11-42-44",
+            "content": "@@ -204,17 +204,17 @@\n  0; i %3C \n-m\n+n\n ; i++ %7B%0A\n@@ -337,17 +337,26 @@\n or%5Bi%5D = \n-0\n+vetor%5Bj+1%5D\n %0A%09%09%09%09bre\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-45-41",
+            "content": "@@ -341,18 +341,9 @@\n %5D = \n-vetor%5Bi+1%5D\n+0\n %0A%09%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-46-15",
+            "content": "@@ -337,17 +337,26 @@\n or%5Bi%5D = \n-0\n+vetor%5Bi+1%5D\n %0A%09%09%09%09bre\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-46-27",
+            "content": "@@ -391,30 +391,8 @@\n + %7B%0A\n-%09%09if vetor%5Bi%5D != 0 %7B%0A%09\n %09%09fm\n@@ -409,17 +409,13 @@\n tor%5Bi%5D)%0A\n-%09%09%7D%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-47-08",
+            "content": "@@ -433,13 +433,8 @@\n r%5Bi%5D\n-, %22 %22\n )%0A%09%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_11-47-44",
+            "content": "@@ -444,24 +444,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println()%0A\n %09%7D%0A%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_11-48-00",
+            "content": "@@ -440,20 +440,17 @@\n  %22)%0A%09%09%7D%0A\n-%0A%09%7D%0A\n+%09\n %09fmt.Pri\n@@ -456,10 +456,13 @@\n intln()%0A\n+%09%7D%0A\n %7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-14_11-48-21",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tvetor := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\tvar m int\n\tfmt.Scan(&m)\n\tdeixou := make([]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&deixou[i])\n\t}\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < m; j++ {\n\t\t\tif vetor[i] == deixou[j] {\n\t\t\t\tvetor[i] = 0\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\tfor i := 0; i < n; i++ {\n\t\tif vetor[i] != 0 {\n\t\t\tfmt.Print(vetor[i], \" \")\n\t\t}\n\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "33"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-15-33",
+            "content": "@@ -165,27 +165,17 @@\n (%5B%5Dint, \n-quantpossui\n+n\n )%0A%09for i\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-15-56",
+            "content": "@@ -182,48 +182,8 @@\n ui)%0A\n-%09repetidasV := make(%5B%5Dint, quantpossui)%0A\n %09for\n@@ -360,21 +360,10 @@\n idas\n-V = possui%5Bi%5D\n+++\n %0A%09%09%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-24-17",
+            "content": "@@ -179,23 +179,26 @@\n ossui)%0A%09\n-vetorep\n+repetidasV\n  := make\n@@ -391,18 +391,18 @@\n %09%09%09%09\n-vetorep%5Bi%5D\n+repetidasV\n  = p\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_11-24-56",
+            "content": "@@ -435,67 +435,26 @@\n %7D%0A%09f\n-or i := 0; i %3C quantpossui; i++ %7B%0A%09%09fmt.Print(vetorep%5Bi%5D)%0A%09%7D\n+mt.Print(repetidas)\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_11-26-11",
+            "content": "@@ -60,11 +60,8 @@\n nt%0A%09\n-// \n var \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-26-21",
+            "content": "@@ -383,10 +383,8 @@\n ui%5Bj\n-+1\n %5D %7B%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-26-50",
+            "content": "@@ -370,10 +370,8 @@\n ui%5Bi\n-+1\n %5D ==\n@@ -379,16 +379,18 @@\n possui%5Bj\n++1\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-27-37",
+            "content": "@@ -366,16 +366,18 @@\n possui%5Bi\n++1\n %5D == pos\n@@ -381,18 +381,16 @@\n possui%5Bj\n-+1\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-28-06",
+            "content": "@@ -290,17 +290,17 @@\n or i := \n-1\n+0\n ; i %3C qu\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-28-19",
+            "content": "@@ -282,33 +282,33 @@\n %5D)%0A%09%7D%0A%09for i := \n-0\n+1\n ; i %3C quantpossu\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-29-21",
+            "content": "@@ -389,33 +389,8 @@\n %5D %7B%0A\n-%09%09%09%09if possui%5Bi%5D != 0 %7B%0A%09\n %09%09%09%09\n@@ -416,28 +416,8 @@\n %5Bi%5D%0A\n-%09%09%09%09%09possui%5Bi%5D = 0%0A%09\n %09%09%09%09\n@@ -426,14 +426,8 @@\n eak%0A\n-%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_11-30-59",
+            "content": "@@ -385,16 +385,41 @@\n %5Bj+1%5D %7B%0A\n+%09%09%09%09if possui%5Bi%5D != 0 %7B%0A%09\n %09%09%09%09veto\n@@ -441,16 +441,17 @@\n %5Bi%5D%0A%09%09%09%09\n+%09\n possui%5Bi\n@@ -458,19 +458,11 @@\n %5D = \n-vetorep%5Bi%5D%0A\n+0%0A%09\n %09%09%09%09\n@@ -467,16 +467,22 @@\n %09%09break%0A\n+%09%09%09%09%7D%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_11-31-33",
+            "content": "@@ -443,27 +443,8 @@\n %5Bi%5D%0A\n-%09%09%09%09vetorep%5Bi%5D = 0%0A\n %09%09%09%09\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_11-32-10",
+            "content": "@@ -439,30 +439,31 @@\n orep%5Bi%5D%0A%09%09%09%09\n-possui\n+vetorep\n %5Bi%5D = 0%0A%09%09%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-32-23",
+            "content": "@@ -442,18 +442,32 @@\n p%5Bi%5D%0A%09%09%09\n-%7D%0A\n+%09possui%5Bi%5D = 0%0A%09\n %09%09%09break\n@@ -467,16 +467,21 @@\n %09%09break%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-32-58",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar totalalbum int\n\t// var repetidas int\n\tfmt.Scan(&totalalbum)\n\tvar quantpossui int\n\tfmt.Scan(&quantpossui)\n\tpossui := make([]int, quantpossui)\n\tvetorep := make([]int, quantpossui)\n\tfor i := 0; i < quantpossui; i++ {\n\t\tfmt.Scan(&possui[i])\n\t}\n\tfor i := 0; i < quantpossui; i++ {\n\t\tfor j := 0; j < totalalbum; j++ {\n\t\t\tif possui[i] == possui[j+1] {\n\t\t\t\tvetorep[i] = possui[i]\n\t\t\t\tpossui[i] = vetorep[i]\n\t\t\t}\n\t\t\tbreak\n\t\t}\n\t}\n\tfor i := 0; i < quantpossui; i++ {\n\t\tfmt.Print(vetorep[i])\n\t}\n}\n",
+            "lines": "28"
+        }
+    ]
+}
