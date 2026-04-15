@@ -1,0 +1,7 @@
+2026-04-15 10:20:57, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-15 10:20:59, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:100, size:126
+2026-04-15 10:21:11, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-15 10:22:20, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-15 10:22:21, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:100, size:132
+2026-04-15 10:22:29, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:100
+2026-04-15 10:23:12, MOVE, v:1, k:ed@fractais_png, mode:BACK

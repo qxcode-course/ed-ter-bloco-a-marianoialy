@@ -1647,6 +1647,16 @@
         },
         {
             "label": "2026-04-13_20-36-24",
+            "content": "@@ -12,23 +12,25 @@\n n%0A%0Afunc \n-fractal\n+samambaia\n (pen *Pe\n@@ -87,24 +87,25 @@\n %09%09return%0A%09%7D%0A\n+%0A\n %09pen.Walk(ta\n@@ -111,16 +111,17 @@\n amanho)%0A\n+%0A\n %09pen.Lef\n@@ -126,48 +126,22 @@\n eft(\n-144)%0A%09for i := 0; i %3C 5; i++ %7B%0A%09%09fractal\n+25)%0A%09samambaia\n (pen\n@@ -156,10 +156,9 @@\n o*0.\n-34\n+6\n , ni\n@@ -165,16 +165,31 @@\n vel-1)%0A%09\n+pen.Right(25)%0A%0A\n %09pen.Rig\n@@ -191,22 +191,57 @@\n n.Right(\n-7\n 2\n+5\n )%0A%09\n-%7D\n+samambaia(pen, tamanho*0.6, nivel-1)\n %0A%09pen.Le\n@@ -248,10 +248,9 @@\n ft(2\n-16\n+5\n )%0A%0A%09\n@@ -324,44 +324,45 @@\n .Set\n-Heading(55)%0A%09pen.SetPosition(600, 60\n+Position(600, 1200)%0A%09pen.SetHeading(9\n 0)%0A%0A\n@@ -378,17 +378,17 @@\n  0; i %3C \n-5\n+4\n ; i++ %7B%0A\n@@ -393,35 +393,37 @@\n %7B%0A%09%09\n-fractal\n+samambaia\n (pen, \n-3\n+2\n 00, \n-6\n+7\n )%0A%09%09pen.\n Righ\n@@ -422,16 +422,41 @@\n pen.\n-Right(72\n+Up()%0A%0A%09%09pen.Walk(150)%0A%09%09pen.Down(\n )%0A%09%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-15_10-20-59",
+            "content": "@@ -12,25 +12,23 @@\n n%0A%0Afunc \n-samambaia\n+fractal\n (pen *Pe\n@@ -85,25 +85,24 @@\n %09%09return%0A%09%7D%0A\n-%0A\n %09pen.Walk(ta\n@@ -108,17 +108,16 @@\n amanho)%0A\n-%0A\n %09pen.Lef\n@@ -118,30 +118,56 @@\n en.Left(\n-25)%0A%09samambaia\n+144)%0A%09for i := 0; i %3C 5; i++ %7B%0A%09%09fractal\n (pen, ta\n@@ -166,33 +166,34 @@\n (pen, tamanho*0.\n-6\n+34\n , nivel-1)%0A%09pen.\n@@ -192,23 +192,8 @@\n 1)%0A%09\n-pen.Right(25)%0A%0A\n %09pen\n@@ -203,49 +203,14 @@\n ght(\n+7\n 2\n-5\n )%0A%09\n-samambaia(pen, tamanho*0.6, nivel-1)\n+%7D\n %0A%09pe\n@@ -217,17 +217,18 @@\n n.Left(2\n-5\n+16\n )%0A%0A%09pen.\n@@ -298,45 +298,44 @@\n .Set\n-Position(600, 1200)%0A%09pen.SetHeading(9\n+Heading(55)%0A%09pen.SetPosition(600, 60\n 0)%0A%0A\n@@ -351,17 +351,17 @@\n  0; i %3C \n-4\n+5\n ; i++ %7B%0A\n@@ -366,70 +366,43 @@\n %7B%0A%09%09\n-samambaia\n+fractal\n (pen, \n-2\n+3\n 00, \n-7)%0A%09%09pen.Up()%0A%0A%09%09pen.Walk(150)%0A%09%09pen.Down(\n+6)%0A%09%09pen.Right(72\n )%0A%09%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-15_10-22-21",
             "content": "package main\n\nfunc samambaia(pen *Pen, tamanho float64, nivel int) {\n\tif nivel == 0 {\n\t\treturn\n\t}\n\n\tpen.Walk(tamanho)\n\n\tpen.Left(25)\n\tsamambaia(pen, tamanho*0.6, nivel-1)\n\tpen.Right(25)\n\n\tpen.Right(25)\n\tsamambaia(pen, tamanho*0.6, nivel-1)\n\tpen.Left(25)\n\n\tpen.Walk(-tamanho)\n}\n\nfunc main() {\n\tpen := NewPen(1200, 1200)\n\tpen.SetPosition(600, 1200)\n\tpen.SetHeading(90)\n\n\tfor i := 0; i < 4; i++ {\n\t\tsamambaia(pen, 200, 7)\n\t\tpen.Up()\n\n\t\tpen.Walk(150)\n\t\tpen.Down()\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n}\n",
             "lines": "35"
         }
