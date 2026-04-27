@@ -10,7 +10,22 @@ import (
 
 func BetterSearch(slice []int, value int) (bool, int) {
 	_, _ = slice, value
-	return false, 0
+	low := 0
+	high := len(slice)
+	for low < high {
+		meio := (low + high) / 2
+
+		if slice[meio] == value {
+			return true, meio
+		}
+		if slice[meio] < value {
+			low = meio + 1
+		} else {
+			high = meio
+		}
+
+	}
+	return false, low
 }
 
 func main() {
