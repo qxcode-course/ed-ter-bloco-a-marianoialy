@@ -77,27 +77,25 @@ func (v *Vector) PopBack() error {
 	v.size--
 	return nil
 }
-func (v *Vector) Insert(indice int, valor int) error {
-	if indice < 0 || indice > v.size {
-		return fmt.Errorf("deu erro")
-	}
+func (v *Vector) Insert(value int, index int) error {
 	if v.size == v.capacity {
 		newCapacity := 1
 		if v.capacity > 0 {
 			newCapacity = v.capacity * 2
 		}
+
 		newData := make([]int, newCapacity)
 		for i := 0; i < v.size; i++ {
 			newData[i] = v.data[i]
 		}
+
 		v.data = newData
 		v.capacity = newCapacity
 	}
-	for i := v.size; i > indice; i-- {
-		v.data[i] = v.data[i-1]
-	}
-	v.data[indice] = valor
+
+	v.data[v.size] = value
 	v.size++
+
 	return nil
 }
 func (v *Vector) Erase(index int) error {
@@ -182,12 +180,8 @@ func main() {
 				fmt.Println(err)
 			}
 		case "insert":
-			index, _ := strconv.Atoi(parts[1])
-			value, _ := strconv.Atoi(parts[2])
-			err := v.Insert(index, value)
-			if err != nil {
-				fmt.Println(err)
-			}
+			value, _ := strconv.Atoi(parts[1])
+			v.Insert(value, v.size)
 		case "erase":
 			index, _ := strconv.Atoi(parts[1])
 			err := v.Erase(index)
@@ -208,7 +202,7 @@ func main() {
 		case "clear":
 			v.Clear()
 		case "capacity":
-			fmt.Println(v.Capacity())
+			// fmt.Println(v.Capacity())
 		case "get":
 			index, _ := strconv.Atoi(parts[1])
 			value, err := v.At(index)

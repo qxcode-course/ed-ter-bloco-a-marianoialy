@@ -77,3 +77,5 @@
 2026-04-26 18:28:18, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:242, fail:COMP
 2026-04-26 18:28:16, MOVE, v:1, k:ed@vetbuild, mode:EDIT
 2026-04-26 18:29:24, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-26 18:30:35, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-26 18:30:37, MOVE, v:1, k:ed@multiset, mode:DOWN
