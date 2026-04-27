@@ -21,13 +21,15 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded: []
+expanded:
+- ed@list
+- ed@vector
 flags:
   inbox: all
-  panel: skills
+  panel: help
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@eval1
-selected_index: 0
+selected: ed@vetbuild
+selected_index: 5

@@ -82,8 +82,48 @@ func (v *Vector) Search(value int) (bool, int) {
 	return false, left
 }
 func (v *Vector) Contains(value int) bool {
-	found, _ := v.Search(value)
-	return found
+	for i := 0; i < v.size; i++ {
+		if v.data[i] == value {
+			return true
+		}
+	}
+	return false
+}
+func (v *Vector) Erase(value int) error {
+	for i := 0; i < v.size; i++ {
+		if v.data[i] == value {
+			for j := i; j < v.size-1; j++ {
+				v.data[j] = v.data[j+1]
+			}
+			v.size--
+			return nil
+		}
+	}
+	return fmt.Errorf("value not found")
+}
+func (v *Vector) Count(value int) int {
+	count := 0
+	for i := 0; i < v.size; i++ {
+		if v.data[i] == value {
+			count++
+		}
+	}
+	return count
+}
+func (v *Vector) Unique() int {
+	if v.size == 0 {
+		return 0
+	}
+	count := 1
+	for i := 1; i < v.size; i++ {
+		if v.data[i] != v.data[i-1] {
+			count++
+		}
+	}
+	return count
+}
+func (v *Vector) Clear() {
+	v.size = 0
 }
 func main() {
 	var line, cmd string
@@ -114,14 +154,21 @@ func main() {
 		case "show":
 			fmt.Println(ms)
 		case "erase":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(args[1])
+			err := ms.Erase(value)
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "contains":
 			value, _ := strconv.Atoi(args[1])
-			ms.Contains(value)
+			fmt.Println(ms.Contains(value))
 		case "count":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(args[1])
+			fmt.Println(ms.Count(value))
 		case "unique":
+			fmt.Println(ms.Unique())
 		case "clear":
+			ms.Clear()
 		default:
 			fmt.Println("fail: comando invalido")
 		}
