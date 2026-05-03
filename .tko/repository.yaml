@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@vector
+- ed@list
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@bfs
-selected_index: 15
+selected: ed@lista_d2
+selected_index: 7

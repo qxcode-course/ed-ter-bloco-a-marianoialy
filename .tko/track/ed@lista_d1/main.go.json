@@ -1,0 +1,174 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_11-30-54",
+            "content": "@@ -52,16 +52,17 @@\n ngs%22%0A)%0A%0A\n+%0A\n func mai\n@@ -106,17 +106,16 @@\n .Stdin)%0A\n-%09\n // %09ll :\n@@ -351,24 +351,27 @@\n  %22show%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-29_10-17-21",
+            "content": "@@ -355,18 +355,16 @@\n ow%22:%0A%09%09%09\n-//\n fmt.Prin\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-29_10-17-33",
+            "content": "@@ -56,400 +56,8 @@\n %0A)%0A%0A\n-type Node struct %7B%0A%09info int%0A%09next *Node%0A%09prev *Node%0A%7D%0Atype Dlist struct %7B%0A%09head *Node%0A%09size int%0A%7D%0A%0Afunc NewDlist() *Dlist %7B%0A%09dlist := &Dlist%7B%7D%0A%09dlist.head = &Node%7B%7D%0A%09dlist.head.next = dlist.head%0A%09dlist.head.prev = dlist.head%0A%09return dlist%0A%7D%0Afunc (l *Dlist) insert(A *Node, value int) %7B%0A%09B := A.prev%0A%0A%09C := &Node%7B%0A%09%09info: value,%0A%09%09next: A,%0A%09%09prev: B,%0A%09%7D%0A%0A%09B.next = C%0A%09A.prev = C%0A%0A%09l.size++%0A%7D%0A\n func\n@@ -105,16 +105,20 @@\n .Stdin)%0A\n+%09// \n %09ll := N\n@@ -123,10 +123,10 @@\n  New\n-Dl\n+LL\n ist(\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-03_18-42-37",
+            "content": "@@ -739,24 +739,26 @@\n  %22show%22:%0A%09%09%09\n+//\n fmt.Println(\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-05-03_18-42-45",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -49,16 +49,16 @@\n trings%22%0A\n+\n )%0A%0Atype \n@@ -298,16 +298,27 @@\n t%0A%7D%0Afunc\n+ (l *Dlist)\n  insert(\n@@ -448,76 +448,8 @@\n +%0A%7D%0A\n-func PushBack(list *Dlist, value int) %7B%0A%09insert(list.head, value)%0A%7D%0A\n func\n@@ -743,18 +743,16 @@\n ow%22:%0A%09%09%09\n-//\n fmt.Prin\n@@ -835,16 +835,19 @@\n ck%22:%0A%09%09%09\n+// \n for _, v\n@@ -870,16 +870,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09num, _ \n@@ -903,16 +903,19 @@\n i(v)%0A%09%09%09\n+// \n %09ll.Push\n@@ -927,16 +927,19 @@\n num)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-05-03_18-47-18",
+            "content": "@@ -430,16 +430,27 @@\n prev = C\n+%0A%0A%09l.size++\n %0A%7D%0Afunc \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-03_18-48-51",
+            "content": "@@ -957,16 +957,19 @@\n (v)%0A%09%09%09%09\n+ll.\n PushBack\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-05-03_18-49-23",
+            "content": "@@ -970,12 +970,8 @@\n ack(\n-ll, \n num)\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-05-03_18-49-38",
+            "content": "@@ -505,240 +505,8 @@\n )%0A%7D%0A\n-func PushFront(list *Dlist, value int) %7B%0A%09insert(list.head.next, value)%0A%7D%0Afunc Stringg(list *Dlist) %7B%0A%09fmt.Print(%22%5B %22)%0A%0A%09for it := list.head.next; it != list.head; it = it.next %7B%0A%09%09fmt.Printf(%22%25d %22, it.info)%0A%09%7D%0A%0A%09fmt.Println(%22%5D%22)%0A%7D%0A\n func\n@@ -515,16 +515,16 @@\n ain() %7B%0A\n+\n %09scanner\n@@ -796,24 +796,26 @@\n  %22show%22:%0A%09%09%09\n+//\n fmt.Println(\n@@ -1000,24 +1000,27 @@\n _front%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1031,32 +1031,35 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+// \n %09num, _ := strco\n@@ -1068,25 +1068,31 @@\n .Atoi(v)%0A%09%09%09\n-%09\n+// %09ll.\n PushFront(ll\n@@ -1089,28 +1089,24 @@\n shFront(\n-ll, \n num)%0A%09%09%09\n %7D%0A%09%09case\n@@ -1089,32 +1089,35 @@\n shFront(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22pop_ba\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-05-03_18-54-30",
+            "content": "@@ -586,16 +586,17 @@\n c String\n+g\n (list *D\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-54-38",
+            "content": "@@ -1047,17 +1047,18 @@\n tln(\n+ll.\n String(\n-ll\n ))%0A%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-55-41",
+            "content": "@@ -1031,16 +1031,28 @@\n ow%22:%0A%09%09%09\n+fmt.Println(\n String(l\n@@ -1053,16 +1053,17 @@\n ring(ll)\n+)\n %0A%09%09case \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-57-54",
+            "content": "@@ -695,16 +695,17 @@\n intf(%22%25d\n+ \n %22, it.in\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-58-07",
+            "content": "@@ -615,16 +615,17 @@\n Print(%22%5B\n+ \n %22)%0A%0A%09for\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-58-48",
+            "content": "@@ -615,18 +615,16 @@\n Print(%22%5B\n-, \n %22)%0A%0A%09for\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-59-13",
+            "content": "@@ -615,16 +615,18 @@\n Print(%22%5B\n+, \n %22)%0A%0A%09for\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_18-59-34",
+            "content": "@@ -607,71 +607,20 @@\n  %7B%0A%09\n-if list.size == 0 %7B%0A%09%09return fmt.Print(%22%5B%5D%22)%0A%09%7D%0A%09fmt.Print(%22%5B, \n+fmt.Print(%22%5B\n %22)%0A%0A\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-03_19-01-03",
+            "content": "@@ -621,24 +621,31 @@\n ze == 0 %7B%0A%09%09\n+return \n fmt.Print(%22%5B\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-05-03_19-01-55",
+            "content": "@@ -641,25 +641,16 @@\n t(%22%5B%5D%22)%0A\n-%09%09return%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-05-03_19-02-02",
+            "content": "@@ -634,18 +634,16 @@\n mt.Print\n-ln\n (%22%5B%5D%22)%0A%09\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-05-03_19-02-15",
+            "content": "@@ -678,24 +678,8 @@\n %22)%0A%0A\n-%09fmt.Print(%22%5B%22)%0A\n %09for\n@@ -766,60 +766,10 @@\n o)%0A%09\n-%09if it.next != list.head %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09\n %7D\n+%0A\n %0A%09fm\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-05-03_19-03-25",
+            "content": "@@ -317,29 +317,16 @@\n  insert(\n-list *Dlist, \n A *Node,\n@@ -435,21 +435,8 @@\n = C%0A\n-%09list.size++%0A\n %7D%0Afu\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-03_19-05-46",
+            "content": "@@ -499,38 +499,32 @@\n  int) %7B%0A%09insert(\n-list, \n list.head, value\n@@ -576,22 +576,16 @@\n %09insert(\n-list, \n list.hea\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-05-03_19-06-30",
+            "content": "@@ -692,16 +692,34 @@\n eturn%0A%09%7D\n+%0A%09fmt.Print(%22%5B, %22)\n %0A%0A%09fmt.P\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-05-03_19-07-20",
+            "content": "@@ -875,57 +875,8 @@\n )%0A%7D%0A\n-func Size(list *Dlist) int %7B%0A%09return list.size%0A%7D%0A\n func\n@@ -1195,24 +1195,27 @@\n  %22size%22:%0A%09%09%09\n+// \n fmt.Println(\n@@ -1218,15 +1218,16 @@\n tln(\n+ll.\n Size(\n-ll\n ))%0A%09\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-03_19-11-23",
+            "content": "@@ -924,51 +924,8 @@\n e%0A%7D%0A\n-func Clear(list *Dlist) %7B%0A%09list.size = 0%0A%7D%0A\n func\n@@ -1591,16 +1591,20 @@\n %0A%09%09%09\n+// ll.\n Clear(\n-ll\n )%0A%09%09\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-05-03_19-12-41",
+            "content": "@@ -950,64 +950,8 @@\n ) %7B%0A\n-%09list.head.next = list.head%0A%09list.head.prev = list.head%0A\n %09lis\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-05-03_19-13-17",
+            "content": "@@ -1023,179 +1023,8 @@\n 0%0A%7D%0A\n-func PopFront(list *Dlist) %7B%0A%09if list.size == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09first := list.head.next%0A%09next := first.next%0A%0A%09list.head.next = next%0A%09next.prev = list.head%0A%0A%09list.size--%0A%7D%0A\n func\n@@ -1618,16 +1618,19 @@\n %09// \n+ll.\n PopBack(\n ll)%0A\n@@ -1625,18 +1625,16 @@\n PopBack(\n-ll\n )%0A%09%09case\n@@ -1650,16 +1650,22 @@\n nt%22:%0A%09%09%09\n+// ll.\n PopFront\n@@ -1665,18 +1665,16 @@\n opFront(\n-ll\n )%0A%09%09case\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-05-03_19-16-51",
+            "content": "@@ -1194,2133 +1194,8 @@\n -%0A%7D%0A\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Node struct %7B%0A%09info int%0A%09next *Node%0A%09prev *Node%0A%7D%0Atype Dlist struct %7B%0A%09head *Node%0A%09size int%0A%7D%0A%0Afunc NewDlist() *Dlist %7B%0A%09dlist := &Dlist%7B%7D%0A%09dlist.head = &Node%7B%7D%0A%09dlist.head.next = dlist.head%0A%09dlist.head.prev = dlist.head%0A%09return dlist%0A%7D%0Afunc insert(list *Dlist, A *Node, value int) %7B%0A%09B := A.prev%0A%0A%09C := &Node%7B%0A%09%09info: value,%0A%09%09next: A,%0A%09%09prev: B,%0A%09%7D%0A%0A%09B.next = C%0A%09A.prev = C%0A%09list.size++%0A%7D%0Afunc PushBack(list *Dlist, value int) %7B%0A%09insert(list, list.head, value)%0A%7D%0Afunc PushFront(list *Dlist, value int) %7B%0A%09insert(list, list.head.next, value)%0A%7D%0Afunc String(list *Dlist) %7B%0A%09if list.size == 0 %7B%0A%09%09fmt.Println(%22%5B%5D%22)%0A%09%09return%0A%09%7D%0A%0A%09fmt.Print(%22%5B%22)%0A%09for it := list.head.next; it != list.head; it = it.next %7B%0A%09%09fmt.Printf(%22%25d%22, it.info)%0A%09%09if it.next != list.head %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D%0Afunc Size(list *Dlist) int %7B%0A%09return list.size%0A%7D%0Afunc Clear(list *Dlist) %7B%0A%09list.head.next = list.head%0A%09list.head.prev = list.head%0A%09list.size = 0%0A%7D%0Afunc PopFront(list *Dlist) %7B%0A%09if list.size == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09first := list.head.next%0A%09next := first.next%0A%0A%09list.head.next = next%0A%09next.prev = list.head%0A%0A%09list.size--%0A%7D%0Afunc PopBack(list *Dlist) %7B%0A%09if list.size == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09first := list.head.prev%0A%09prev := first.prev%0A%0A%09list.head.prev = prev%0A%09prev.prev = list.head%0A%0A%09list.size--%0A%7D%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09ll := NewDlist()%0A%0A%09for %7B%0A%09%09fmt.Print(%22$%22)%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09line := scanner.Text()%0A%09%09fmt.Println(line)%0A%09%09args := strings.Fields(line)%0A%0A%09%09if len(args) == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09cmd := args%5B0%5D%0A%0A%09%09switch cmd %7B%0A%09%09case %22show%22:%0A%09%09%09String(ll)%0A%09%09case %22size%22:%0A%09%09%09fmt.Println(Size(ll))%0A%09%09case %22push_back%22:%0A%09%09%09for _, v := range args%5B1:%5D %7B%0A%09%09%09%09num, _ := strconv.Atoi(v)%0A%09%09%09%09PushBack(ll, num)%0A%09%09%09%7D%0A%09%09case %22push_front%22:%0A%09%09%09for _, v := range args%5B1:%5D %7B%0A%09%09%09%09num, _ := strconv.Atoi(v)%0A%09%09%09%09PushFront(ll, num)%0A%09%09%09%7D%0A%09%09case %22pop_back%22:%0A%09%09%09PopBack(ll)%0A%09%09case %22pop_front%22:%0A%09%09%09// ll.PopFront()%0A%09%09case %22clear%22:%0A%09%09%09Clear(ll)%0A%09%09case %22end%22:%0A%09%09%09return%0A%09%09default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)%0A%09%09%7D%0A%09%7D%0A%7D%0A\n func\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-05-03_19-18-16",
+            "content": "@@ -2450,18 +2450,19 @@\n rn%0A%09%7D%0A%0A%09\n-la\n+fir\n st := li\n@@ -2479,20 +2479,19 @@\n ev%0A%09\n-befo\n+p\n re\n+v\n  := \n-la\n+fir\n st.p\n@@ -2500,56 +2500,52 @@\n v%0A%0A%09\n-before.next = list.head%0A%09list.head.prev = before\n+list.head.prev = prev%0A%09prev.prev = list.head\n %0A%0A%09l\n",
+            "lines": "271"
+        },
+        {
+            "label": "2026-05-03_19-18-42",
+            "content": "@@ -3180,32 +3180,38 @@\n %22pop_front%22:%0A%09%09%09\n+// ll.\n PopFront(ll)%0A%09%09c\n@@ -3195,34 +3195,32 @@\n %09// ll.PopFront(\n-ll\n )%0A%09%09case %22clear%22\n",
+            "lines": "271"
+        },
+        {
+            "label": "2026-05-03_19-19-00",
+            "content": "@@ -3315,8 +3315,765 @@\n %09%7D%0A%09%7D%0A%7D%0A\n+func main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09ll := NewDlist()%0A%0A%09for %7B%0A%09%09fmt.Print(%22$%22)%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09line := scanner.Text()%0A%09%09fmt.Println(line)%0A%09%09args := strings.Fields(line)%0A%0A%09%09if len(args) == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09cmd := args%5B0%5D%0A%0A%09%09switch cmd %7B%0A%09%09case %22show%22:%0A%09%09%09String(ll)%0A%09%09case %22size%22:%0A%09%09%09fmt.Println(Size(ll))%0A%09%09case %22push_back%22:%0A%09%09%09for _, v := range args%5B1:%5D %7B%0A%09%09%09%09num, _ := strconv.Atoi(v)%0A%09%09%09%09PushBack(ll, num)%0A%09%09%09%7D%0A%09%09case %22push_front%22:%0A%09%09%09for _, v := range args%5B1:%5D %7B%0A%09%09%09%09num, _ := strconv.Atoi(v)%0A%09%09%09%09PushFront(ll, num)%0A%09%09%09%7D%0A%09%09case %22pop_back%22:%0A%09%09%09// PopBack(ll)%0A%09%09case %22pop_front%22:%0A%09%09%09PopFront(ll)%0A%09%09case %22clear%22:%0A%09%09%09Clear(ll)%0A%09%09case %22end%22:%0A%09%09%09return%0A%09%09default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)%0A%09%09%7D%0A%09%7D%0A%7D%0A\n",
+            "lines": "271"
+        },
+        {
+            "label": "2026-05-03_19-19-31",
+            "content": "@@ -1,8 +1,1205 @@\n+package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Node struct %7B%0A%09info int%0A%09next *Node%0A%09prev *Node%0A%7D%0Atype Dlist struct %7B%0A%09head *Node%0A%09size int%0A%7D%0A%0Afunc NewDlist() *Dlist %7B%0A%09dlist := &Dlist%7B%7D%0A%09dlist.head = &Node%7B%7D%0A%09dlist.head.next = dlist.head%0A%09dlist.head.prev = dlist.head%0A%09return dlist%0A%7D%0Afunc insert(list *Dlist, A *Node, value int) %7B%0A%09B := A.prev%0A%0A%09C := &Node%7B%0A%09%09info: value,%0A%09%09next: A,%0A%09%09prev: B,%0A%09%7D%0A%0A%09B.next = C%0A%09A.prev = C%0A%09list.size++%0A%7D%0Afunc PushBack(list *Dlist, value int) %7B%0A%09insert(list, list.head, value)%0A%7D%0Afunc PushFront(list *Dlist, value int) %7B%0A%09insert(list, list.head.next, value)%0A%7D%0Afunc String(list *Dlist) %7B%0A%09if list.size == 0 %7B%0A%09%09fmt.Println(%22%5B%5D%22)%0A%09%09return%0A%09%7D%0A%0A%09fmt.Print(%22%5B%22)%0A%09for it := list.head.next; it != list.head; it = it.next %7B%0A%09%09fmt.Printf(%22%25d%22, it.info)%0A%09%09if it.next != list.head %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D%0Afunc Size(list *Dlist) int %7B%0A%09return list.size%0A%7D%0Afunc Clear(list *Dlist) %7B%0A%09list.head.next = list.head%0A%09list.head.prev = list.head%0A%09list.size = 0%0A%7D%0Afunc PopFront(list *Dlist) %7B%0A%09if list.size == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09first := list.head.next%0A%09next := first.next%0A%0A%09list.head.next = next%0A%09next.prev = list.head%0A%0A%09list.size--%0A%7D%0A\n package \n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-03_19-20-17",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tinfo int\n\tnext *Node\n\tprev *Node\n}\ntype Dlist struct {\n\thead *Node\n\tsize int\n}\n\nfunc NewDlist() *Dlist {\n\tdlist := &Dlist{}\n\tdlist.head = &Node{}\n\tdlist.head.next = dlist.head\n\tdlist.head.prev = dlist.head\n\treturn dlist\n}\nfunc insert(list *Dlist, A *Node, value int) {\n\tB := A.prev\n\n\tC := &Node{\n\t\tinfo: value,\n\t\tnext: A,\n\t\tprev: B,\n\t}\n\n\tB.next = C\n\tA.prev = C\n\tlist.size++\n}\nfunc PushBack(list *Dlist, value int) {\n\tinsert(list, list.head, value)\n}\nfunc PushFront(list *Dlist, value int) {\n\tinsert(list, list.head.next, value)\n}\nfunc String(list *Dlist) {\n\tif list.size == 0 {\n\t\tfmt.Println(\"[]\")\n\t\treturn\n\t}\n\n\tfmt.Print(\"[\")\n\tfor it := list.head.next; it != list.head; it = it.next {\n\t\tfmt.Printf(\"%d\", it.info)\n\t\tif it.next != list.head {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\nfunc Size(list *Dlist) int {\n\treturn list.size\n}\nfunc Clear(list *Dlist) {\n\tlist.head.next = list.head\n\tlist.head.prev = list.head\n\tlist.size = 0\n}\nfunc PopFront(list *Dlist) {\n\tif list.size == 0 {\n\t\treturn\n\t}\n\n\tfirst := list.head.next\n\tnext := first.next\n\n\tlist.head.next = next\n\tnext.prev = list.head\n\n\tlist.size--\n}\nfunc PopBack(list *Dlist) {\n\tif list.size == 0 {\n\t\treturn\n\t}\n\n\tlast := list.head.prev\n\tbefore := last.prev\n\n\tbefore.next = list.head\n\tlist.head.prev = before\n\n\tlist.size--\n}\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewDlist()\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tString(ll)\n\t\tcase \"size\":\n\t\t\tfmt.Println(Size(ll))\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tPushBack(ll, num)\n\t\t\t}\n\t\tcase \"push_front\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tPushFront(ll, num)\n\t\t\t}\n\t\tcase \"pop_back\":\n\t\t\tPopBack(ll)\n\t\tcase \"pop_front\":\n\t\t\tPopFront(ll)\n\t\tcase \"clear\":\n\t\t\tClear(ll)\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "142"
+        }
+    ]
+}
