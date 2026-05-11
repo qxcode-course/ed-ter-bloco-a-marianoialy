@@ -18,43 +18,122 @@ func (e *Editor) InsertChar(r rune) {
 	e.it_char = e.it_line.Value.Insert(e.it_char, r)
 	e.it_char = e.it_char.Next()
 }
-
-func (e *Editor) KeyLeft() {
-	if e.it_char.Prev() != e.it_line.Value.End() {
-		e.it_char = e.it_char.Prev() // Move o cursor para a esquerda
+func getCol(line *List[rune], it *Node[rune]) int {
+	col := 0
+	for n := line.Front(); n != it; n = n.Next() {
+		col++
 	}
+	return col
 }
+func goToCol(line *List[rune], col int) *Node[rune] {
+	n := line.Front()
+	i := 0
 
+	for n != line.End() && i < col {
+		n = n.Next()
+		i++
+	}
+
+	return n
+}
+func (e *Editor) KeyLeft() {
+	if e.it_char == e.it_line.Value.Front() {
+		if e.it_line.Prev() != e.texto.End() {
+			e.it_line = e.it_line.Prev()
+			e.it_char = e.it_line.Value.End().Prev()
+		}
+		return
+	}
+	e.it_char = e.it_char.Prev()
+}
 func (e *Editor) KeyEnter() {
 	nova := NewList[rune]()
+	for e.it_char != e.it_line.Value.End() {
+		val := e.it_char.Value
+		e.it_char = e.it_line.Value.Erase(e.it_char)
+		nova.PushBack(val)
+	}
 	e.texto.Insert(e.it_line.Next(), nova)
 	e.it_line = e.it_line.Next()
 	e.it_char = e.it_line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
-	if e.it_char.Next() != e.it_line.Value.End() {
-		e.it_char = e.it_char.Next() // Move o cursor para a direira
+	if e.it_char == e.it_line.Value.End() {
+		if e.it_line.Next() != e.texto.End() {
+			e.it_line = e.it_line.Next()
+			e.it_char = e.it_line.Value.Front()
+		}
+		return
 	}
+	e.it_char = e.it_char.Next()
 }
 func (e *Editor) KeyUp() {
-
+	if e.it_line.Prev() == e.texto.End() {
+		return
+	}
+	col := getCol(e.it_line.Value, e.it_char)
+	e.it_line = e.it_line.Prev()
+	e.it_char = goToCol(e.it_line.Value, col)
 }
 
 func (e *Editor) KeyDown() {
+	if e.it_line.Next() == e.texto.End() {
+		return
+	}
+
+	col := getCol(e.it_line.Value, e.it_char)
+
+	e.it_line = e.it_line.Next()
+	e.it_char = goToCol(e.it_line.Value, col)
 }
 
 func (e *Editor) KeyBackspace() {
-	e.it_char = e.it_line.Value.Erase(e.it_char.prev)
-}
+	if e.it_char == e.it_line.Value.Front() {
 
-func (e *Editor) KeyDelete() {
-	if e.it_char.Next() != e.it_line.Value.End() {
-		e.it_char = e.it_line.Value.Erase(e.it_char.next)
-		e.it_char = e.it_char.Prev()
+		if e.it_line.Prev() == e.texto.End() {
+			return
+		}
 
+		linhaAtual := e.it_line
+		linhaAnterior := e.it_line.Prev()
+
+		e.it_line = linhaAnterior
+		e.it_char = linhaAnterior.Value.End()
+
+		for n := linhaAtual.Value.Front(); n != linhaAtual.Value.End(); {
+			next := n.Next()
+			linhaAnterior.Value.PushBack(n.Value)
+			linhaAtual.Value.Erase(n)
+			n = next
+		}
+
+		return
 	}
 
+	e.it_char = e.it_line.Value.Erase(e.it_char.Prev())
+}
+func (e *Editor) KeyDelete() {
+	if e.it_char == e.it_line.Value.End() {
+
+		if e.it_line.Next() == e.texto.End() {
+			return
+		}
+
+		linhaAtual := e.it_line
+		proxima := e.it_line.Next()
+
+		for n := proxima.Value.Front(); n != proxima.Value.End(); {
+			next := n.Next()
+			linhaAtual.Value.PushBack(n.Value)
+			proxima.Value.Erase(n)
+			n = next
+		}
+
+		return
+	}
+
+	e.it_char = e.it_line.Value.Erase(e.it_char)
 }
 
 func main() {

@@ -1,0 +1,35 @@
+2026-05-05 10:24:36, MOVE, v:1, k:ed@editor, mode:DOWN
+2026-05-05 10:25:19, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-05-05 10:26:34, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:26:45, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 10:29:29, EXEC, v:1, k:src@go, mode:FREE, size:259
+2026-05-05 10:31:49, EXEC, v:1, k:src@go, mode:FREE
+2026-05-05 10:35:14, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:35:16, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100, size:259
+2026-05-05 10:35:47, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-05-05 10:35:56, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 10:36:40, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-05 10:56:44, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:56:47, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-05 10:56:48, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 10:57:27, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:57:30, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-05-05 10:57:31, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-05-05 10:57:31, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 10:59:45, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:59:48, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0, size:259
+2026-05-05 10:59:48, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 11:00:13, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 11:00:18, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-05 11:00:19, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 11:00:58, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 11:01:00, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-05 11:01:06, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-05 11:01:07, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 11:03:01, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 11:03:05, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-05 11:03:09, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-05-05 11:03:10, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 11:03:53, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 11:03:56, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-05 11:04:33, EXEC, v:1, k:ed@editorint, mode:FREE
