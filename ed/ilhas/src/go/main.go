@@ -6,43 +6,57 @@ import (
 	"os"
 )
 
-// Não modifique a assinatura da função numIslands
-// Ela é a função que será chamada no LeetCode para resolver o problema
-func numIslands(grid [][]byte) int {
-	linhas := len(grid)
-	colunas := len(grid[0])
+type Pos struct {
+	lin, col int
+}
 
-	var dfs func(int, int)
-
-	dfs = func(l, c int) {
-		if l < 0 || c < 0 || l >= linhas || c >= colunas {
-			return
-		}
-
-		if grid[l][c] == '0' {
-			return
-		}
-
-		grid[l][c] = '0'
-
-		dfs(l+1, c)
-		dfs(l-1, c)
-		dfs(l, c+1)
-		dfs(l, c-1)
+func estaDentro(matriz [][]byte, p Pos) bool {
+	return p.lin >= 0 &&
+		p.lin < len(matriz) &&
+		p.col >= 0 &&
+		p.col < len(matriz[0])
+}
+func dfs(
+	matriz [][]byte,
+	p Pos,
+	visitados map[Pos]bool,
+) {
+	if !estaDentro(matriz, p) ||
+		matriz[p.lin][p.col] != '1' ||
+		visitados[p] {
+		return
 	}
+	visitados[p] = true
+	dfs(matriz, Pos{p.lin + 1, p.col}, visitados)
+	dfs(matriz, Pos{p.lin - 1, p.col}, visitados)
+	dfs(matriz, Pos{p.lin, p.col + 1}, visitados)
+	dfs(matriz, Pos{p.lin, p.col - 1}, visitados)
+}
 
-	qtd := 0
+// Não modifique a assinatura da função numIslands
+func numIslands(grid [][]byte) int {
 
-	for i := 0; i < linhas; i++ {
-		for j := 0; j < colunas; j++ {
-			if grid[i][j] == '1' {
-				qtd++
-				dfs(i, j)
+	visitados := make(map[Pos]bool)
+
+	cont := 0
+
+	for l := 0; l < len(grid); l++ {
+
+		for c := 0; c < len(grid[0]); c++ {
+
+			p := Pos{l, c}
+
+			if grid[l][c] == '1' &&
+				!visitados[p] {
+
+				dfs(grid, p, visitados)
+
+				cont++
 			}
 		}
 	}
 
-	return qtd
+	return cont
 }
 
 // Não modifique a função main

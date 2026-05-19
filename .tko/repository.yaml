@@ -21,7 +21,8 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded: []
+expanded:
+- ed@dfs
 flags:
   inbox: all
   panel: skills
@@ -29,5 +30,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@dfs
-selected_index: 8
+selected: ed@cercado
+selected_index: 11
