@@ -8,11 +8,36 @@ import (
 	"strings"
 )
 
+type Pos struct {
+	sr int
+	sc int
+}
+
 // Não modifique a assinatura da função floodFill
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 	//
 	_ := image
 	return 0
+}
+func dfs(board [][]byte, p Pos, visitados map[Pos]bool) {
+	if !dentro(board, p) {
+		return
+	}
+
+	if board[p.lin][p.col] != 'O' {
+		return
+	}
+
+	if visitados[p] {
+		return
+	}
+
+	visitados[p] = true
+
+	dfs(board, Pos{p.lin - 1, p.col}, visitados)
+	dfs(board, Pos{p.lin + 1, p.col}, visitados)
+	dfs(board, Pos{p.lin, p.col - 1}, visitados)
+	dfs(board, Pos{p.lin, p.col + 1}, visitados)
 }
 
 // Não modifique a função main

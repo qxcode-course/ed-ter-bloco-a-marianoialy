@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_10-56-45",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,530 +23,53 @@\n mt%22%0A\n-%0A\n func \n-solve(v %5B%5Dint, i int, so\n ma\n- \n in\n-t, alvo int) bool %7B%0A%09if soma == alvo %7B%0A%09%09return true%0A%09%7D%0A%09if i == len(v) %7B%0A%09%09return false%0A%09%7D%0A%09if solve(v, i+1, soma+v%5Bi%5D, alvo) %7B%0A%09%09return true%0A%09%7D%0A%09if solve(v, i+1, soma, alvo) %7B%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%09var n, alvo int%0A%0A%09fmt.Print(%22Quantidade de elementos: %22)%0A%09fmt.Scan(&n)%0A%0A%09fmt.Print(%22Soma desejada: %22)%0A%09fmt.Scan(&alvo)%0A%0A%09v := make(%5B%5Dint, n)%0A%0A%09fmt.Println(%22Digite os elementos:%22)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&v%5Bi%5D)%0A%09%7D%0A%09fmt.Println(solve(v, 0, 0, alvo)\n+() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-20_11-01-37",
+            "content": "@@ -302,20 +302,92 @@\n int%0A\n-%09fmt.Scan(&n\n+%0A%09fmt.Print(%22Quantidade de elementos: %22)%0A%09fmt.Scan(&n)%0A%0A%09fmt.Print(%22Soma desejada: %22\n )%0A%09f\n@@ -401,16 +401,17 @@\n (&alvo)%0A\n+%0A\n %09v := ma\n@@ -423,16 +423,55 @@\n int, n)%0A\n+%0A%09fmt.Println(%22Digite os elementos:%22)%0A%0A\n %09for i :\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-20_11-01-51",
+            "content": "@@ -417,16 +417,23 @@\n (solve(v\n+, 0, 0,\n  alvo))%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_11-02-09",
+            "content": "@@ -417,17 +417,16 @@\n (solve(v\n-,\n  alvo))%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_11-02-15",
+            "content": "@@ -1,58 +1,33 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc solve(v %5B%5Dint\n+@@ -47,16 +47,26 @@%0A \n , i int,\n  som\n@@ -22,16 +22,18 @@\n , i int,\n+%0A+\n  soma in\n@@ -38,381 +38,110 @@\n int,\n- alvo int) bool %7B%0A%09if soma == alvo %7B%0A%09%09return true%0A%09%7D%0A%09if i == len(v) %7B%0A%09%09return false%0A%09%7D%0A%09if solve(v, i+1, soma+v%5Bi%5D, alvo) %7B%0A%09%09return true%0A%09%7D%0A%09if solve(v, i+1, soma, alvo) %7B%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%09var n, alvo int%0A%09fmt.Scan(&n)%0A%09fmt.Scan(&alvo)%0A%09v := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&v%5Bi%5D)%0A%09%7D%0A%09fmt.Println(solv\n+%0A  alvo in%0A@@ -79,22 +79,8 @@%0A l %257B%250A%0A-%2509var soma int%250A%0A %2509if %0A@@ -422,11 +422,8 @@%0A \n e(v,\n+%0A-\n  0,\n+%0A\n  \n-0,\n  alv\n-o))%0A%7D\n %0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-05-20_11-05-21",
+            "content": "@@ -418,16 +418,22 @@\n solve(v,\n+ 0, 0,\n  alvo))%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_11-05-44",
+            "content": "@@ -422,14 +422,8 @@\n e(v,\n- 0, 0,\n  alv\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_11-19-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc solve(v []int, i int, soma int, alvo int) bool {\n\tif soma == alvo {\n\t\treturn true\n\t}\n\tif i == len(v) {\n\t\treturn false\n\t}\n\tif solve(v, i+1, soma+v[i], alvo) {\n\t\treturn true\n\t}\n\tif solve(v, i+1, soma, alvo) {\n\t\treturn true\n\t}\n\treturn false\n}\n\nfunc main() {\n\tvar n, alvo int\n\tfmt.Scan(&n)\n\tfmt.Scan(&alvo)\n\tv := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&v[i])\n\t}\n\tfmt.Println(solve(v, 0, 0, alvo))\n}\n",
+            "lines": "30"
+        }
+    ]
+}
