@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_08-52-44",
+            "content": "@@ -45,556 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09lin int%0A%09col int%0A%7D%0A%0Afunc dentro(board %5B%5D%5B%5Dbyte, p Pos) bool %7B%0A%09return p.lin %3E= 0 && p.lin %3C len(board) &&%0A%09%09p.col %3E= 0 && p.col %3C len(board%5B0%5D)%0A%7D%0A%0Afunc dfs(board %5B%5D%5B%5Dbyte, p Pos, visitados map%5BPos%5Dbool) %7B%0A%09if !dentro(board, p) %7B%0A%09%09return%0A%09%7D%0A%0A%09if board%5Bp.lin%5D%5Bp.col%5D != 'O' %7B%0A%09%09return%0A%09%7D%0A%0A%09if visitados%5Bp%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visitados%5Bp%5D = true%0A%0A%09dfs(board, Pos%7Bp.lin - 1, p.col%7D, visitados)%0A%09dfs(board, Pos%7Bp.lin + 1, p.col%7D, visitados)%0A%09dfs(board, Pos%7Bp.lin, p.col - 1%7D, visitados)%0A%09dfs(board, Pos%7Bp.lin, p.col + 1%7D, visitados)%0A%7D%0A%0A\n // N\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-20_09-06-39",
+            "content": "@@ -666,693 +666,17 @@\n  %7B%0A%09\n-if len(board) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09nrows := len(board)%0A%09ncols := len(board%5B0%5D)%0A%0A%09visitados := make(map%5BPos%5Dbool)%0A%0A%09for col := 0; col %3C ncols; col++ %7B%0A%09%09if board%5B0%5D%5Bcol%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7B0, col%7D, visitados)%0A%09%09%7D%0A%0A%09%09if board%5Bnrows-1%5D%5Bcol%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7Bnrows - 1, col%7D, visitados)%0A%09%09%7D%0A%09%7D%0A%0A%09for lin := 0; lin %3C nrows; lin++ %7B%0A%09%09if board%5Blin%5D%5B0%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7Blin, 0%7D, visitados)%0A%09%09%7D%0A%0A%09%09if board%5Blin%5D%5Bncols-1%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7Blin, ncols - 1%7D, visitados)%0A%09%09%7D%0A%09%7D%0A%0A%09for lin := 0; lin %3C nrows; lin++ %7B%0A%09%09for col := 0; col %3C ncols; col++ %7B%0A%09%09%09p := Pos%7Blin, col%7D%0A%0A%09%09%09if board%5Blin%5D%5Bcol%5D == 'O' && !visitados%5Bp%5D %7B%0A%09%09%09%09board%5Blin%5D%5Bcol%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+_ = board\n %0A%7D%0A%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-20_09-07-11",
+            "content": "@@ -45,90 +45,1314 @@\n %0A)%0A%0A\n-// N%C3%83O ALTERE A ASSINATURA DA FUN%C3%87%C3%83O solve%0Afunc solve(board %5B%5D%5B%5Dbyte) %7B%0A%09_ = board\n+type Pos struct %7B%0A%09lin int%0A%09col int%0A%7D%0A%0Afunc dentro(board %5B%5D%5B%5Dbyte, p Pos) bool %7B%0A%09return p.lin %3E= 0 && p.lin %3C len(board) &&%0A%09%09p.col %3E= 0 && p.col %3C len(board%5B0%5D)%0A%7D%0A%0Afunc dfs(board %5B%5D%5B%5Dbyte, p Pos, visitados map%5BPos%5Dbool) %7B%0A%09if !dentro(board, p) %7B%0A%09%09return%0A%09%7D%0A%0A%09if board%5Bp.lin%5D%5Bp.col%5D != 'O' %7B%0A%09%09return%0A%09%7D%0A%0A%09if visitados%5Bp%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visitados%5Bp%5D = true%0A%0A%09dfs(board, Pos%7Bp.lin - 1, p.col%7D, visitados)%0A%09dfs(board, Pos%7Bp.lin + 1, p.col%7D, visitados)%0A%09dfs(board, Pos%7Bp.lin, p.col - 1%7D, visitados)%0A%09dfs(board, Pos%7Bp.lin, p.col + 1%7D, visitados)%0A%7D%0A%0A// N%C3%83O ALTERE A ASSINATURA DA FUN%C3%87%C3%83O solve%0Afunc solve(board %5B%5D%5B%5Dbyte) %7B%0A%09if len(board) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09nrows := len(board)%0A%09ncols := len(board%5B0%5D)%0A%0A%09visitados := make(map%5BPos%5Dbool)%0A%0A%09for col := 0; col %3C ncols; col++ %7B%0A%09%09if board%5B0%5D%5Bcol%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7B0, col%7D, visitados)%0A%09%09%7D%0A%0A%09%09if board%5Bnrows-1%5D%5Bcol%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7Bnrows - 1, col%7D, visitados)%0A%09%09%7D%0A%09%7D%0A%0A%09for lin := 0; lin %3C nrows; lin++ %7B%0A%09%09if board%5Blin%5D%5B0%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7Blin, 0%7D, visitados)%0A%09%09%7D%0A%0A%09%09if board%5Blin%5D%5Bncols-1%5D == 'O' %7B%0A%09%09%09dfs(board, Pos%7Blin, ncols - 1%7D, visitados)%0A%09%09%7D%0A%09%7D%0A%0A%09for lin := 0; lin %3C nrows; lin++ %7B%0A%09%09for col := 0; col %3C ncols; col++ %7B%0A%09%09%09p := Pos%7Blin, col%7D%0A%0A%09%09%09if board%5Blin%5D%5Bcol%5D == 'O' && !visitados%5Bp%5D %7B%0A%09%09%09%09board%5Blin%5D%5Bcol%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-20_09-07-31",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\t_ = board\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "29"
+        }
+    ]
+}

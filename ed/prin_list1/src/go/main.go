@@ -33,6 +33,7 @@ func Next(l *DList[int], it *DNode[int]) *DNode[int] {
 
 func main() {
 	var qtd, chosen int
+
 	fmt.Scan(&qtd, &chosen)
 
 	l := NewDList[int]()
