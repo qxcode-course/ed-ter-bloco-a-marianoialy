@@ -17,8 +17,13 @@
         },
         {
             "label": "2026-05-19_08-30-06",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc valido(s []byte, pos int, num byte, L int) bool {\n\tfor i := pos - 1; i >= 0 && pos-i <= L; i-- {\n\t\tif s[i] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\tfor i := pos + 1; i < len(s) && i-pos <= L; i++ {\n\t\tif s[i] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\nfunc backtrack(s []byte, pos int, L int) bool {\n\n\tif pos == len(s) {\n\t\treturn true\n\t}\n\n\tif s[pos] != '.' {\n\n\t\tif !valido(s, pos, s[pos], L) {\n\t\t\treturn false\n\t\t}\n\n\t\treturn backtrack(s, pos+1, L)\n\t}\n\n\tfor num := byte('0'); num <= byte('0'+L); num++ {\n\n\t\tif valido(s, pos, num, L) {\n\t\t\ts[pos] = num\n\t\t\tif backtrack(s, pos+1, L) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t\ts[pos] = '.'\n\t\t}\n\t}\n\treturn false\n}\nfunc main() {\n\n\tin := bufio.NewReader(os.Stdin)\n\tvar str string\n\tvar L int\n\n\tfmt.Fscan(in, &str)\n\tfmt.Fscan(in, &L)\n\ts := []byte(str)\n\n\tbacktrack(s, 0, L)\n\tfmt.Println(string(s))\n}\n",
+            "content": "@@ -862,9 +862,8 @@\n g(s))%0A%7D%0A\n-%0A\n",
             "lines": "61"
+        },
+        {
+            "label": "2026-05-20_10-29-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc valido(s []byte, pos int, num byte, L int) bool {\n\tfor i := pos - 1; i >= 0 && pos-i <= L; i-- {\n\t\tif s[i] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\tfor i := pos + 1; i < len(s) && i-pos <= L; i++ {\n\t\tif s[i] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\nfunc backtrack(s []byte, pos int, L int) bool {\n\n\tif pos == len(s) {\n\t\treturn true\n\t}\n\n\tif s[pos] != '.' {\n\n\t\tif !valido(s, pos, s[pos], L) {\n\t\t\treturn false\n\t\t}\n\n\t\treturn backtrack(s, pos+1, L)\n\t}\n\n\tfor num := byte('0'); num <= byte('0'+L); num++ {\n\n\t\tif valido(s, pos, num, L) {\n\t\t\ts[pos] = num\n\t\t\tif backtrack(s, pos+1, L) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t\ts[pos] = '.'\n\t\t}\n\t}\n\treturn false\n}\nfunc main() {\n\n\tin := bufio.NewReader(os.Stdin)\n\tvar str string\n\tvar L int\n\n\tfmt.Fscan(in, &str)\n\tfmt.Fscan(in, &L)\n\ts := []byte(str)\n\n\tbacktrack(s, 0, L)\n\tfmt.Println(string(s))\n}\n\n",
+            "lines": "62"
         }
     ]
 }
