@@ -481,3 +481,4 @@
 2026-05-20 11:22:07, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
 2026-05-20 11:22:10, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
 2026-05-20 11:22:10, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 11:19:04, MOVE, v:1, k:ed@subset_sum, mode:EDIT
