@@ -482,3 +482,52 @@
 2026-05-20 11:22:10, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
 2026-05-20 11:22:10, MOVE, v:1, k:ed@wordsearch, mode:BACK
 2026-05-20 11:19:04, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-20 11:24:38, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 11:27:25, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:28:18, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:28:19, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:31:31, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:31:34, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 11:31:54, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 11:31:55, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:35:20, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 11:36:06, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:104
+2026-05-20 11:36:07, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:07, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:08, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:08, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 11:36:34, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 11:36:35, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:36, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:36, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:37, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:37, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:38, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:38, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:39, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100
+2026-05-20 11:36:44, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-05-20 11:36:49, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 11:36:52, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 11:36:43, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 11:36:42, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 11:40:01, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:40:02, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:40:02, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 11:40:11, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 11:40:12, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 11:36:43, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 11:36:42, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 14:06:06, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 14:06:19, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 14:06:20, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 14:06:21, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 14:06:25, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 14:06:40, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-05-20 14:06:41, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-05-20 14:06:42, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-05-20 14:08:36, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 14:08:38, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 15:52:49, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 15:53:08, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 15:53:09, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 15:53:09, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25

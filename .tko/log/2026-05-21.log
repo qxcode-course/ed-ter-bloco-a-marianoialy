@@ -1,0 +1,36 @@
+2026-05-21 08:17:56, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 08:17:58, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-21 08:17:59, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 08:19:30, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 08:19:50, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-21 08:19:51, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 08:21:06, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 08:25:56, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-21 08:25:57, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 08:26:15, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 08:26:16, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-21 08:26:27, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-21 08:26:27, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 08:26:28, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 08:27:34, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-21 08:27:35, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 08:27:51, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-21 08:27:53, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-05-21 08:27:55, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-05-21 08:27:56, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-05-21 08:27:58, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-21 08:28:07, SELF, v:1, k:ed@subset_sum, self:1, rate:100, concept:1, code:1
+2026-05-21 08:28:07, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-21 08:28:09, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-05-21 08:28:09, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-21 08:28:47, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-21 08:28:51, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-05-21 08:28:52, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-21 08:28:54, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-21 08:29:22, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-21 08:29:29, SELF, v:1, k:ed@subset_sum, self:1, rate:100, concept:1
+2026-05-21 08:29:32, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-21 08:45:50, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-21 08:46:29, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-21 08:46:30, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:90
+2026-05-21 08:46:31, MOVE, v:1, k:ed@vetbuild, mode:BACK

@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@backtrack
+- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -27,5 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@wordsearch
-selected_index: 4
+selected: ed@especiais
+selected_index: 6
