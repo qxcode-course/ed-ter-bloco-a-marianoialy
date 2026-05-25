@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_16-33-18",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,292 +23,53 @@\n mt%22%0A\n-%0Afunc eh_primo(x int, div int) bool %7B%0A%09if x %3C 2 %7B%0A%09%09return false%0A%09%7D%0A%09if div*div %3E x %7B%0A%09%09return true%0A%09%7D%0A%09if x%25div == 0 %7B%0A%09%09return false%0A%09%7D%0A%09return eh_primo(x, div+1)%0A%7D%0A%0Afunc main() %7B%0A%09var x int%0A%09fmt.Scan(&x)%0A%09if eh_primo(x, 2) %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-25_16-35-12",
+            "content": "@@ -191,54 +191,47 @@\n )%0A%7D%0A\n+%0A\n func \n-enesimo(n int, atual int, cont int) int %7B\n+main() %7B%0A%09var x int%0A%09fmt.Scan(&x)\n %0A%09if\n@@ -240,21 +240,17 @@\n h_primo(\n-atual\n+x\n , 2) %7B%0A%09\n@@ -254,125 +254,39 @@\n %7B%0A%09%09\n-cont++%0A%09%7D%0A%09if cont == n %7B%0A%09%09return atual%0A%09%7D%0A%09return enesimo(n, atual, cont)%0A%7D%0Afunc main() %7B%0A%09var x int%0A%09fmt.Scan(&x)%0A\n+fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09\n %09fmt\n@@ -298,18 +298,18 @@\n tln(\n-enesimo(x))\n+%22false%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-25_16-40-03",
+            "content": "@@ -404,14 +404,8 @@\n mo(x\n-, 2, 0\n ))%0A%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-25_16-40-20",
+            "content": "@@ -329,18 +329,16 @@\n n, atual\n-+1\n , cont)%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-25_16-40-32",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\nfunc enesimo(n int, atual int, cont int) int {\n\tif eh_primo(atual, 2) {\n\t\tcont++\n\t}\n\tif cont == n {\n\t\treturn atual\n\t}\n\treturn enesimo(n, atual+1, cont)\n}\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tfmt.Println(enesimo(x, 2, 0))\n}\n",
+            "lines": "30"
+        }
+    ]
+}

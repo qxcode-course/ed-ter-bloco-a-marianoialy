@@ -11,13 +11,13 @@ func ToStr(l *DList[int], sword *DNode[int]) string {
 
 	for n := l.Front(); n != l.End(); n = n.Next() {
 		if n == sword {
-			valores = append(valores, ">"+fmt.Sprint(n.Value))
+			valores = append(valores, fmt.Sprint(n.Value)+">")
 		} else {
 			valores = append(valores, fmt.Sprint(n.Value))
 		}
 	}
 
-	return "[" + strings.Join(valores, " ") + "]"
+	return "[ " + strings.Join(valores, " ") + " ]"
 }
 
 // move para frente na lista circular
@@ -51,7 +51,8 @@ func main() {
 	for range qtd - 1 {
 		fmt.Println(ToStr(l, sword))
 
-		l.Erase(Next(l, sword))
+		toRemove := Next(l, sword)
+		l.Erase(toRemove)
 
 		sword = Next(l, sword)
 	}

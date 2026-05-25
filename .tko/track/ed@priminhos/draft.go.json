@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_16-48-59",
+            "content": "@@ -381,16 +381,41 @@\n ain() %7B%0A\n+%09var x int%0A%09fmt.Scan(&x)%0A\n %09var n i\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-25_16-51-19",
+            "content": "@@ -439,13 +439,8 @@\n tln(\n-%22,%22, \n carr\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-25_16-51-54",
+            "content": "@@ -435,16 +435,21 @@\n Println(\n+%22,%22, \n carregar\n@@ -468,13 +468,8 @@\n , v)\n-, %22,%22\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-25_16-52-13",
+            "content": "@@ -427,13 +427,20 @@\n %7D%0A%0A%09\n-x := \n+fmt.Println(\n carr\n@@ -463,75 +463,13 @@\n , v)\n-%0A%09if len(x) == 1 %7B%0A%09%09fmt.Println(x)%0A%09%7D else %7B%0A%09%09fmt.Print(x\n , %22,%22)%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-25_16-53-53",
+            "content": "@@ -514,18 +514,17 @@\n int(\n+x, \n %22,%22\n-, x\n )%0A%09%7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-25_16-54-11",
+            "content": "@@ -457,71 +457,26 @@\n  v)%0A\n-%0A%09fmt.Print(%22%5B%22)%0A%0A%09for i := 0; i %3C len(x); i++ %7B%0A%09%09if i %3E 0\n+%09if len(x) == 1\n  %7B%0A\n-%09\n %09%09fm\n@@ -486,19 +486,23 @@\n rint\n-(%22, %22\n+ln(x\n )%0A\n-%09\n %09%7D\n-%0A\n+ else %7B\n %0A%09%09f\n@@ -514,34 +514,18 @@\n int(\n-x%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(%22%5D%22)\n+%22,%22, x)%0A%09%7D%0A\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-25_16-55-28",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\nfunc carregar_primos(n int, atual int, v []int) []int {\n\tif len(v) == n {\n\t\treturn v\n\t}\n\tif eh_primo(atual, 2) {\n\t\tv = append(v, atual)\n\t}\n\treturn carregar_primos(n, atual+1, v)\n}\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tv := []int{}\n\n\tx := carregar_primos(n, 2, v)\n\n\tfmt.Print(\"[\")\n\n\tfor i := 0; i < len(x); i++ {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\n\t\tfmt.Print(x[i])\n\t}\n\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "45"
+        }
+    ]
+}
