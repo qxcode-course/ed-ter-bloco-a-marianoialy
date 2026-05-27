@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_14-46-46",
+            "content": "@@ -18,390 +18,25 @@\n ort \n-%22fmt%22%0A%0Afunc main() %7B%0A%09queue := NewQueue%5Bstring%5D()%0A%09for letra := 'A'; letra %3C 'P'; letra++ %7B%0A%09%09queue.Enqueue(string(letra))%0A%09%7D%0A%09for queue.items.Len() %3E 1 %7B%0A%09%09time1 := queue.Dequeue()%0A%09%09time2 := queue.Dequeue()%0A%09%09var gols1 int%0A%09%09var gols2 int%0A%09%09fmt.Scan(&gols1, &gols2)%0A%09%09if gols1 %3E gols2 %7B%0A%09%09%09queue.Enqueue(time1)%0A%09%09%7D else %7B%0A%09%09%09queue.Enqueue(time2)%0A%09%09%7D%0A%09%7D%0A%09fmt.Printf(queue.Dequeue())\n+(%0A)%0A%0Afunc main() %7B\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-27_19-51-22",
+            "content": "@@ -90,17 +90,16 @@\n  letra %3C\n-=\n  'P'; le\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-27_19-52-55",
+            "content": "@@ -384,10 +384,9 @@\n rint\n-ln\n+f\n (que\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-27_19-53-05",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqueue := NewQueue[string]()\n\tfor letra := 'A'; letra <= 'P'; letra++ {\n\t\tqueue.Enqueue(string(letra))\n\t}\n\tfor queue.items.Len() > 1 {\n\t\ttime1 := queue.Dequeue()\n\t\ttime2 := queue.Dequeue()\n\t\tvar gols1 int\n\t\tvar gols2 int\n\t\tfmt.Scan(&gols1, &gols2)\n\t\tif gols1 > gols2 {\n\t\t\tqueue.Enqueue(time1)\n\t\t} else {\n\t\t\tqueue.Enqueue(time2)\n\t\t}\n\t}\n\tfmt.Println(queue.Dequeue())\n}\n",
+            "lines": "23"
+        }
+    ]
+}

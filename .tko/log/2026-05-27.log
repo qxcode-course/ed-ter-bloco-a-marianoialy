@@ -206,3 +206,43 @@
 2026-05-27 11:59:11, MOVE, v:1, k:ed@pilha, mode:PICK
 2026-05-27 11:59:12, MOVE, v:1, k:ed@pilha, mode:BACK
 2026-05-27 11:59:24, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:110, guided:1, concept:1
+2026-05-27 14:09:22, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-27 14:12:23, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100
+2026-05-27 14:12:28, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-27 14:12:45, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-27 14:26:11, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100
+2026-05-27 14:26:12, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-27 14:26:24, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-27 14:26:36, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-27 14:26:38, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-27 14:26:41, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-27 14:45:29, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-27 14:45:30, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-05-27 14:46:27, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-27 14:46:46, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:47
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 14:46:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 15:35:49, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-27 19:34:39, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-27 19:34:45, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0
+2026-05-27 19:34:47, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-27 19:35:14, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-27 19:38:26, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-27 19:46:05, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-27 19:45:46, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-27 19:51:22, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:63
+2026-05-27 19:51:23, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0
+2026-05-27 19:51:26, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0
+2026-05-27 19:52:55, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:63
+2026-05-27 19:53:05, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:63
+2026-05-27 19:53:12, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-27 19:53:40, SELF, v:1, k:ed@chaves, self:1, rate:100
+2026-05-27 19:53:56, SELF, v:1, k:ed@chaves, self:1, rate:100, concept:1, code:1
+2026-05-27 19:54:01, SELF, v:1, k:ed@chaves, self:1, rate:100, friend:55, concept:1, code:1
