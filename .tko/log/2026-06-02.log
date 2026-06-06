@@ -1,0 +1,6 @@
+2026-06-02 20:09:38, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-02 20:09:41, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-06-02 20:09:43, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-06-02 20:09:44, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-02 20:32:02, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-02 20:32:05, MOVE, v:1, k:ed@pilha, mode:BACK

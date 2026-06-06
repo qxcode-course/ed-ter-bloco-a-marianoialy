@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-06_15-17-56",
+            "content": "@@ -512,215 +512,29 @@\n  %7B%0A%09\n-elem := (*parts)%5B0%5D%0A%09*parts := (*parts)%5B1:%5D%0A%09if elem == %22#%22 %7B%0A%09%09return nil%0A%09%7D%0A%09var value int%0A%09fmt.Sscan(elem, %22%25d%22, &value)%0A%09node := &node%7BValue: value%7D%0A%09node.Left = create(parts)%0A%09node.Right = create(parts)\n+_ = parts%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-06_15-31-09",
+            "content": "@@ -528,16 +528,40 @@\n rts)%5B0%5D%0A\n+%09*parts := (*parts)%5B1:%5D%0A\n %09if elem\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-06_15-31-38",
+            "content": "@@ -528,17 +528,16 @@\n rts)%5B0%5D%0A\n-%0A\n %09if elem\n@@ -618,17 +618,17 @@\n ode := &\n-N\n+n\n ode%7BValu\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-06_15-31-52",
+            "content": "@@ -532,30 +532,8 @@\n %5B0%5D%0A\n-%09*elem := (*parts)%5B1:%5D\n %0A%09if\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-06_15-32-10",
+            "content": "@@ -530,22 +530,22 @@\n s)%5B0%5D%0A%09*\n-parts \n+elem :\n = (*part\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-06_15-32-47",
+            "content": "@@ -610,17 +610,16 @@\n mt.Sscan\n-f\n (elem, %22\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-06_15-33-30",
+            "content": "@@ -719,21 +719,8 @@\n rts)\n-%0A%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-06_15-33-47",
+            "content": "@@ -726,19 +726,18 @@\n return n\n-ode\n+il\n %0A%7D%0A%0A// B\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-06_15-34-03",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\n// Node representa um n\u00f3 na \u00e1rvore bin\u00e1ria.\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// create constr\u00f3i uma \u00e1rvore bin\u00e1ria a partir de uma lista de strings.\n// Consuma os elementos da lista sempre do in\u00edcio.\n// Voc\u00ea pode obter o primeiro elemento com 'elem := (*parts)[0]'\n// Voc\u00ea pode fazer um \"push_front\" no array usando '*parts = (*parts)[1:]\n// Se o elemento for \"#\", significa que o n\u00f3 \u00e9 nulo.\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvar value int\n\tfmt.Sscanf(elem, \"%d\", &value)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\n\treturn node\n}\n\n// BShow \u00e9 uma fun\u00e7\u00e3o auxiliar para imprimir a \u00e1rvore bin\u00e1ria.\n// Primeira invoca\u00e7\u00e3o de ser com history como uma string vazia.\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Split(line, \" \")\n\troot := create(&parts)\n\tBShow(root, \"\")\n}\n",
+            "lines": "75"
+        }
+    ]
+}
