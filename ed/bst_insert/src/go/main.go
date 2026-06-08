@@ -14,18 +14,23 @@ type Node struct {
 	Right *Node
 }
 
-func BstInsert(values []int) *Node {
-	elem := (*parts)[0]
-	*parts = (*parts)[1:]
-	if elem == "#" {
-		return nil
+func Insert(node *Node, value int) *Node {
+	if node == nil {
+		return &Node{Value: value}
 	}
-	var value int
-	fmt.Sscanf(elem, "%d", &value)
-	node := &Node{Value: value}
-	node.Left = BstInsert(parts)
-	node.Right = BstInsert(parts)
+	if value < node.Value {
+		node.Left = Insert(node.Left, value)
+	} else if value > node.Value {
+		node.Right = Insert(node.Right, value)
+	}
 	return node
+}
+func BstInsert(values []int) *Node {
+	var root *Node
+	for _, value := range values {
+		root = Insert(root, value)
+	}
+	return root
 }
 
 // -----------------------------------------------------------------------------------
