@@ -1,0 +1,55 @@
+2026-06-10 19:01:41, SELF, v:1, k:ed@baruel, self:1, rate:100
+2026-06-10 19:01:41, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-10 19:01:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-06-10 19:01:43, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-10 19:01:52, SELF, v:1, k:ed@gomos, self:1, rate:100
+2026-06-10 19:01:59, SELF, v:1, k:ed@gomos, self:1, rate:100, code:1, debug:1
+2026-06-10 19:02:06, SELF, v:1, k:ed@baruel, self:1, rate:100, code:1
+2026-06-10 19:02:18, SELF, v:1, k:ed@gomos, self:1, rate:100, problem:1, code:1
+2026-06-10 19:02:19, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-06-10 19:02:20, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-06-10 19:02:43, SELF, v:1, k:ed@apagando, self:1, rate:100, friend:nao
+2026-06-10 19:02:50, SELF, v:1, k:ed@especiais, self:1, rate:100
+2026-06-10 19:02:56, SELF, v:1, k:ed@especiais, self:1, rate:100, code:1
+2026-06-10 19:03:04, SELF, v:1, k:ed@apagando, self:1, rate:100, friend:nao, code:1
+2026-06-10 19:03:17, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-06-10 19:03:20, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:100
+2026-06-10 19:03:21, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-06-10 19:03:32, SELF, v:1, k:ed@fractais_png, self:1, rate:100, concept:1
+2026-06-10 19:03:38, SELF, v:1, k:ed@fractais_png, self:1, rate:100, guided:1, concept:1
+2026-06-10 19:04:19, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-06-10 19:04:20, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-06-10 19:04:29, SELF, v:1, k:ed@vetbuild, self:1, rate:90, concept:1
+2026-06-10 19:04:37, SELF, v:1, k:ed@vetbuild, self:1, rate:90, guided:1, concept:1
+2026-06-10 19:03:20, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-06-10 19:05:55, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:05:56, EXEC, v:1, k:ed@battleship, mode:FULL, fail:COMP
+2026-06-10 19:05:57, EXEC, v:1, k:ed@battleship, mode:FULL, fail:COMP
+2026-06-10 19:05:57, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:06:14, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:06:46, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:07:02, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:11:16, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:11:21, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:20:08, EXEC, v:1, k:ed@battleship, mode:FULL, fail:COMP
+2026-06-10 19:20:27, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:20:30, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:34:33, EXEC, v:1, k:ed@battleship, mode:FULL, fail:COMP
+2026-06-10 19:41:43, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:41:45, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:43:54, EXEC, v:1, k:ed@battleship, mode:FULL, size:52, fail:COMP
+2026-06-10 19:44:12, EXEC, v:1, k:ed@battleship, mode:FULL, size:53, fail:COMP
+2026-06-10 19:44:27, EXEC, v:1, k:ed@battleship, mode:FULL, rate:50, size:53
+2026-06-10 19:44:36, EXEC, v:1, k:ed@battleship, mode:FULL, rate:50
+2026-06-10 19:44:37, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:45:16, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-06-10 19:45:34, EXEC, v:1, k:ed@battleship, mode:FULL, rate:50, size:53
+2026-06-10 19:45:54, EXEC, v:1, k:ed@battleship, mode:FULL, rate:50, size:53
+2026-06-10 19:46:04, EXEC, v:1, k:ed@battleship, mode:FULL, rate:50, size:53
+2026-06-10 19:46:13, EXEC, v:1, k:ed@battleship, mode:FULL, rate:100, size:53
+2026-06-10 19:46:25, EXEC, v:1, k:ed@battleship, mode:FULL, rate:50, size:53
+2026-06-10 19:46:34, EXEC, v:1, k:ed@battleship, mode:FULL, rate:100, size:53
+2026-06-10 19:46:47, SELF, v:1, k:ed@battleship, self:1, rate:100, study:45
+2026-06-10 19:46:48, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-06-10 19:47:51, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-10 19:49:05, MOVE, v:1, k:ed@chaves, mode:BACK

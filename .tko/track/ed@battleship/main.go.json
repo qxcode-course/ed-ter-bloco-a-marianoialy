@@ -2,8 +2,53 @@
     "patches": [
         {
             "label": "2026-05-25_11-55-08",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// Fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode\nfunc countBattleships(board [][]byte) int {\n\t//\n\t_ := board\n\treturn 0\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -31,528 +31,120 @@\n %22%0A%09%22\n-crypto/dsa%22%0A%09%22encoding/base32%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0Afunc dfs(matriz%5B%5D%5B%5Dbyte, i, j int)%7B%0A%09if i %3C 0 %7C%7C i %3E= len(matriz) %7C%7C j %3C 0 %7C%7C j %3E= len(matriz%5B0%5D)%7B%0A%09%09return%0A%09%7D%0A%09if matriz%5Bi%5D%5Bj%5D != %22X%22%7B%0A%09%09return%0A%09%7D%0A%09matriz%5Bi%5D%5Bj%5D = %22.%22%0A%09dfs(matriz, i+1, j)%0A%09dfs(matriz, i-1, j)%0A%09dfs(matriz, i, j+1)%0A%09dfs(matriz, i, j-1)%0A%7D%0A// Fun%C3%A7%C3%A3o que ser%C3%A1 chamada no LeetCode%0Afunc countBattleships(board %5B%5D%5B%5Dbyte) int %7B%0A%09cont := 0%0A%09for i:=0; i %3C len(board); i++%7B%0A%09%09for j:= 0; j %3C len(board); j++%0A%09%09if board%5Bi%5D%5Bj%5D == 'X'%7B%0A%09%09%09cont++%0A%09%09%09dfs(board, i, j)%0A%09%09%7D%0A%09%7D\n+fmt%22%0A%09%22os%22%0A)%0A%0A// Fun%C3%A7%C3%A3o que ser%C3%A1 chamada no LeetCode%0Afunc countBattleships(board %5B%5D%5B%5Dbyte) int %7B%0A%09//%0A%09_ := board\n %0A%09re\n@@ -152,12 +152,9 @@\n urn \n-cont\n+0\n %0A%7D%0A%0A\n",
             "lines": "32"
+        },
+        {
+            "label": "2026-06-10_19-43-53",
+            "content": "@@ -25,16 +25,49 @@\n %22bufio%22%0A\n+%09%22crypto/dsa%22%0A%09%22encoding/base32%22%0A\n %09%22fmt%22%0A%09\n@@ -73,17 +73,16 @@\n %09%22os%22%0A)%0A\n-%0A\n func dfs\n@@ -88,17 +88,16 @@\n s(matriz\n- \n %5B%5D%5B%5Dbyte\n@@ -107,17 +107,16 @@\n , j int)\n- \n %7B%0A%09if i \n@@ -170,17 +170,16 @@\n triz%5B0%5D)\n- \n %7B%0A%09%09retu\n@@ -207,17 +207,16 @@\n %5D != %22X%22\n- \n %7B%0A%09%09retu\n@@ -327,17 +327,16 @@\n  j-1)%0A%7D%0A\n-%0A\n // Fun%C3%A7%C3%A3\n@@ -423,28 +423,26 @@\n  := 0%0A%09for i\n- \n :=\n- \n 0; i %3C len(b\n@@ -447,25 +447,24 @@\n (board); i++\n- \n %7B%0A%09%09for j :=\n@@ -460,17 +460,16 @@\n %0A%09%09for j\n- \n := 0; j \n@@ -485,20 +485,17 @@\n rd); j++\n- %7B%0A%09\n+%0A\n %09%09if boa\n@@ -513,23 +513,20 @@\n  'X'\n- \n %7B%0A%09%09%09\n-%09\n cont++%0A\n-%09\n %09%09%09d\n@@ -545,13 +545,8 @@\n  j)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-10_19-44-12",
+            "content": "@@ -175,19 +175,19 @@\n %5D%5Bj%5D != \n-'X'\n+%22X%22\n  %7B%0A%09%09ret\n@@ -213,11 +213,11 @@\n %5D = \n-'.'\n+%22.%22\n %0A%09df\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-44-27",
+            "content": "@@ -94,17 +94,17 @@\n  0 %7C%7C i \n-%3C\n+%3E\n = len(ma\n@@ -123,17 +123,17 @@\n  0 %7C%7C j \n-%3C\n+%3E\n = len(ma\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-45-34",
+            "content": "@@ -98,9 +98,9 @@\n %7C i \n-%3E\n+%3C\n = le\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-45-54",
+            "content": "@@ -123,17 +123,17 @@\n  0 %7C%7C j \n-%3E\n+%3C\n = len(ma\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-46-04",
+            "content": "@@ -456,19 +456,16 @@\n en(board\n-%5B0%5D\n ); j++ %7B\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-46-13",
+            "content": "@@ -457,17 +457,17 @@\n n(board%5B\n-1\n+0\n %5D); j++ \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-46-25",
+            "content": "@@ -457,17 +457,17 @@\n n(board%5B\n-0\n+1\n %5D); j++ \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-10_19-46-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dfs(matriz [][]byte, i, j int) {\n\tif i < 0 || i >= len(matriz) || j < 0 || j >= len(matriz[0]) {\n\t\treturn\n\t}\n\tif matriz[i][j] != 'X' {\n\t\treturn\n\t}\n\tmatriz[i][j] = '.'\n\tdfs(matriz, i+1, j)\n\tdfs(matriz, i-1, j)\n\tdfs(matriz, i, j+1)\n\tdfs(matriz, i, j-1)\n}\n\n// Fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode\nfunc countBattleships(board [][]byte) int {\n\tcont := 0\n\tfor i := 0; i < len(board); i++ {\n\t\tfor j := 0; j < len(board[0]); j++ {\n\t\t\tif board[i][j] == 'X' {\n\t\t\t\tcont++\n\t\t\t\tdfs(board, i, j)\n\t\t\t}\n\t\t}\n\t}\n\treturn cont\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "lines": "53"
         }
     ]
 }
