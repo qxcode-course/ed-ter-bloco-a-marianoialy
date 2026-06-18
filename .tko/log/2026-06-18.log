@@ -1,0 +1,16 @@
+2026-06-18 09:46:55, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-06-18 09:47:39, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-06-18 09:47:41, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-06-18 09:49:28, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-18 09:49:29, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-06-18 09:49:30, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-18 09:49:37, SELF, v:1, k:ed@baruel, self:1, rate:100
+2026-06-18 09:49:37, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-18 09:49:39, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-18 09:49:47, SELF, v:1, k:ed@baruel, self:1, rate:100, code:1
+2026-06-18 09:49:47, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-18 09:49:48, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-06-18 09:49:49, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-18 09:49:50, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-18 09:50:34, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-18 09:58:22, SELF, v:1, k:ed@recursao, self:1, rate:100

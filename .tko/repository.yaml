@@ -19,13 +19,24 @@ sources:
   writeable: false
   quests: null
 expanded:
+- eval1@eval1
+- ed@vector
 - ed@linear
+- ed@basic
+- ed@tree
+- ed@list
+- ed@rec
+- ed@backtrack
+- ed@dfs
+- ed@map_set
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@chaves
-selected_index: 9
+selected: ed@recursao
+selected_index: 18
