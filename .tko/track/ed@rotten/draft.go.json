@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_18-38-12",
+            "content": "@@ -289,389 +289,11 @@\n  len\n-(q) %3E 0 %7B%0A        atual := q%5B0%5D%0A        q = q%5B1:%5D%0A%0A        for _, v := atual.getNeig()%7B%0A            if v.l %3E= 0 && v.l %3C len(grid) && c.l %3E= 0 && c.l %3C len(grid%5B0%5D) && grid%5Bv.l%5D%5Bv.c%5D == 1%7B%0A                grid%5Bv.l%5D%5Bv.c%5D = 2%0A                q = append(q, v)%0A            %7D%0A        %7D%0A    %7D  %0A        min++%0A    %0A        if fresh == 0%7B%0A            return -1%0A        %7D%0A        return min\n+   \n  %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-22_18-44-22",
+            "content": "@@ -702,97 +702,25 @@\n intl\n-(apodrencendo(%5B%5D%5B%5Dint%7B%0A        %7B2,1,1 %7D,%0A        %7B1,1,0%7D,%0A        %7B0,1,1%7D,%0A%0A    %7D%0A    ) ) \n+n(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-22_18-46-54",
+            "content": "@@ -201,13 +201,13 @@\n grid\n- \n %5B%5D%5B%5D\n+ \n int \n@@ -419,17 +419,17 @@\n rid) && \n-v\n+c\n .l %3E= 0 \n@@ -423,33 +423,33 @@\n  && c.l %3E= 0 && \n-v\n+c\n .l %3C len(grid%5B0%5D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-22_18-48-07",
+            "content": "@@ -421,17 +421,17 @@\n d) && v.\n-c\n+l\n  %3E= 0 &&\n@@ -433,17 +433,17 @@\n  0 && v.\n-c\n+l\n  %3C len(g\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-22_18-48-53",
+            "content": "@@ -558,32 +558,40 @@\n     %7D%0A        %7D%0A\n+    %7D  %0A\n         min++%0A  \n@@ -588,24 +588,16 @@\n   min++%0A\n-    %7D  %0A\n     %0A   \n@@ -615,18 +615,16 @@\n sh == 0%7B\n-  \n %0A       \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-22_18-50-23",
+            "content": "@@ -700,17 +700,16 @@\n t.Printl\n-n\n (apodren\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-22_18-50-40",
+            "content": "@@ -277,271 +277,8 @@\n  0 %0A\n-    fresh := 0%0A%0A    for i:= 0; i %3C len(grid); i++%7B%0A        for j:= 0; j%3C len(grid%5B0%5D); j++%7B%0A            if grid%5Bi%5D%5Bj%5D == 2%7B%0A                q= append(q, Pos%7Bi, j%7D)%0A            %7D%0A            if grid%5Bi%5D%5Bj%5D == 1%7B%0A                fresh++%0A            %7D%0A        %7D%0A    %7D\n %0A   \n@@ -672,17 +672,16 @@\n  min %0A%7D%0A\n-%0A\n func mai\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-22_18-55-54",
+            "content": "@@ -231,16 +231,45 @@\n %5B%5DPos%7B%7D%0A\n+    q =append(q, Pos%7B0 ,0 %7D)%0A\n     min:\n@@ -562,68 +562,8 @@\n 0 %7B%0A\n-        size := len(q)%0A%0A        for i:= 0; i%3C size;i++%7B%0A    \n     \n@@ -584,28 +584,24 @@\n %5B0%5D%0A        \n-    \n q = q%5B1:%5D%0A  \n@@ -598,24 +598,25 @@\n = q%5B1:%5D%0A\n+%0A\n         \n     for \n@@ -611,20 +611,16 @@\n     \n-    \n for _, v\n := r\n@@ -619,16 +619,11 @@\n _, v\n+ \n :=\n- range\n  atu\n@@ -636,20 +636,16 @@\n Neig()%7B%0A\n-    \n         \n@@ -753,20 +753,16 @@\n         \n-    \n grid%5Bv.l\n@@ -792,72 +792,84 @@\n     \n-    fresh --%0A                    q = append(q, v)\n+q = append(q, v)%0A            %7D%0A        %7D%0A        min++\n %0A    \n+%7D\n   \n+%0A    %0A\n         \n   %7D%0A\n@@ -868,35 +868,46 @@\n     \n-  %7D%0A     \n+if fresh == 0%7B  %0A\n      \n-  %7D%0A\n        \n- %7D\n+return -1\n %0A   \n@@ -907,29 +907,25 @@\n  -1%0A        \n-min++\n+%7D\n %0A        ret\n@@ -935,17 +935,13 @@\n  min\n-%0A    %7D\n+ \n %0A%7D%0A\n+%0A\n func\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-22_19-05-16",
+            "content": "@@ -949,33 +949,8 @@\n n++%0A\n-    %7D%0A    if fresh %3E 0 %7B%0A\n     \n@@ -964,32 +964,18 @@\n urn \n--1\n+min\n %0A    %7D%0A\n-    return min%0A\n %7D%0Afu\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-22_19-05-51",
+            "content": "@@ -943,50 +943,13 @@\n     \n-if len(q) %3E 0%7B%0A            min++%0A        %7D\n+min++\n %0A   \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-22_19-06-47",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -39,24 +39,25 @@\n ruct\n- \n %7B%0A\n-%09\n+    \n l,\n- \n c int\n+ \n %0A%7D%0A\n-%0A\n func\n@@ -209,16 +209,17 @@\n %5Dint\n+ \n ) int %7B%0A\n %09q :\n@@ -214,17 +214,20 @@\n ) int %7B%0A\n-%09\n+    \n q := %5B%5DP\n@@ -235,19 +235,25 @@\n s%7B%7D%0A\n-%09\n+    \n min\n- \n := 0\n-%0A%09\n+ %0A    \n fres\n@@ -260,23 +260,25 @@\n h := 0%0A%0A\n-%09\n+    \n for i\n- \n := 0; i \n@@ -297,27 +297,30 @@\n  i++\n- \n %7B%0A\n-%09%09\n+        \n for j\n- \n := 0; j\n- \n %3C le\n@@ -334,22 +334,30 @@\n 0%5D); j++\n- \n %7B%0A\n-%09%09%09\n+            \n if grid%5B\n@@ -370,17 +370,27 @@\n == 2\n- \n %7B%0A\n-%09%09%09%09q \n+                q\n = ap\n@@ -408,24 +408,42 @@\n %7Bi, j%7D)%0A\n-%09%09%09%7D%0A%09%09%09\n+            %7D%0A            \n if grid%5B\n@@ -456,36 +456,68 @@\n == 1\n- \n %7B%0A\n-%09%09%09%09fresh++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n+                fresh++%0A            %7D%0A        %7D%0A    %7D%0A    \n for \n@@ -529,18 +529,24 @@\n ) %3E 0 %7B%0A\n-%09%09\n+        \n size := \n@@ -557,41 +557,52 @@\n q)%0A%0A\n-%09%09\n+        \n for i\n- \n := 0; i\n- \n %3C size;\n- \n i++\n- \n %7B%0A\n-%09%09%09\n+            \n atua\n@@ -615,32 +615,50 @@\n %5B0%5D%0A\n-%09%09%09q = q%5B1:%5D%0A%09%09%09\n+            q = q%5B1:%5D%0A            \n for _, v\n  := \n@@ -653,17 +653,16 @@\n for _, v\n- \n := range\n@@ -677,23 +677,34 @@\n etNeig()\n- \n %7B%0A\n-%09%09%09%09\n+                \n if v.l %3E\n@@ -786,87 +786,165 @@\n == 1\n- \n %7B%0A\n-%09%09%09%09%09grid%5Bv.l%5D%5Bv.c%5D = 2%0A%09%09%09%09%09\n+                    grid%5Bv.l%5D%5Bv.c%5D = 2%0A                    \n fresh\n+ \n --%0A\n-%09%09%09%09%09q = append(q, v)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n+                    q = append(q, v)%0A                %7D%0A            %7D%0A        %7D%0A        \n if l\n@@ -956,28 +956,48 @@\n  %3E 0\n- \n %7B%0A\n-%09%09%09min++%0A%09%09%7D%0A%09%7D%0A%09\n+            min++%0A        %7D%0A    %7D%0A    \n if f\n@@ -1007,18 +1007,24 @@\n h %3E 0 %7B%0A\n-%09%09\n+        \n return -\n@@ -1029,12 +1029,18 @@\n  -1%0A\n-%09%7D%0A%09\n+    %7D%0A    \n retu\n@@ -1062,17 +1062,20 @@\n ain() %7B%0A\n-%09\n+    \n fmt.Prin\n@@ -1104,50 +1104,74 @@\n nt%7B%0A\n-%09%09\n+        \n %7B2,\n- \n 1,\n- \n 1\n+ \n %7D,%0A\n-%09%09\n+        \n %7B1,\n- \n 1,\n- \n 0%7D,%0A\n-%09%09\n+        \n %7B0,\n- \n 1,\n- \n 1%7D,%0A\n-%09%7D))\n+%0A    %7D%0A    ) ) \n %0A%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-22_19-08-36",
+            "content": "@@ -467,27 +467,8 @@\n (q)%0A\n-%09%09alterado := false\n %0A%09%09f\n@@ -720,29 +720,8 @@\n  v)%0A\n-%09%09%09%09%09alterado = true%0A\n %09%09%09%09\n@@ -740,16 +740,18 @@\n %09if \n-alterado\n+len(q) %3E 0\n  %7B%0A%09\n@@ -762,28 +762,8 @@\n n++%0A\n-%09%09%7D else %7B%0A%09%09%09break%0A\n %09%09%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-22_19-11-23",
+            "content": "@@ -780,9 +780,8 @@\n %09if \n-!\n alte\n@@ -787,16 +787,36 @@\n erado %7B%0A\n+%09%09%09min++%0A%09%09%7D else %7B%0A\n %09%09%09break\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-22_19-15-10",
+            "content": "@@ -776,16 +776,17 @@\n %09%7D%0A%09%09if \n+!\n alterado\n@@ -792,28 +792,8 @@\n o %7B%0A\n-%09%09%09min++%0A%09%09%7D else %7B%0A\n %09%09%09b\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-22_19-16-11",
+            "content": "@@ -432,39 +432,8 @@\n %0A%09%7D%0A\n-%09if fresh == 0 %7B%0A%09%09return 0%0A%09%7D%0A\n %09for\n@@ -543,17 +543,16 @@\n = q%5B1:%5D%0A\n-%0A\n %09%09%09for _\n@@ -775,22 +775,13 @@\n %09%09%7D%0A\n-%09%09min++%0A\n %09%09if \n-!\n alte\n@@ -793,18 +793,29 @@\n %7B%0A%09%09%09min\n---\n+++%0A%09%09%7D else %7B\n %0A%09%09%09brea\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-22_19-22-58",
+            "content": "@@ -184,22 +184,20 @@\n unc \n-orangesRotting\n+apodrencendo\n (gri\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-22_19-26-59",
+            "content": "@@ -927,30 +927,28 @@\n Println(\n-orangesRotting\n+apodrencendo\n (%5B%5D%5B%5Dint\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-22_19-27-10",
+            "content": "@@ -919,210 +919,85 @@\n  %7B%0A%09\n-var m, n int%0A%09fmt.Scan(&m, &n)%0A%0A%09grid := make(%5B%5D%5B%5Dint, m)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09grid%5Bi%5D = make(%5B%5Dint, n)%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09fmt.Scan(&grid%5Bi%5D%5Bj%5D)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(orangesRotting(grid\n+fmt.Println(orangesRotting(%5B%5D%5B%5Dint%7B%0A%09%09%7B2, 1, 1%7D,%0A%09%09%7B1, 1, 0%7D,%0A%09%09%7B0, 1, 1%7D,%0A%09%7D\n ))%0A%7D\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-22_19-35-22",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\treturn []Pos{\n\t\t{p.l + 1, p.c},\n\t\t{p.l - 1, p.c},\n\t\t{p.l, p.c + 1},\n\t\t{p.l, p.c - 1},\n\t}\n}\nfunc orangesRotting(grid [][]int) int {\n\tq := []Pos{}\n\tmin := 0\n\tfresh := 0\n\n\tfor i := 0; i < len(grid); i++ {\n\t\tfor j := 0; j < len(grid[0]); j++ {\n\t\t\tif grid[i][j] == 2 {\n\t\t\t\tq = append(q, Pos{i, j})\n\t\t\t}\n\t\t\tif grid[i][j] == 1 {\n\t\t\t\tfresh++\n\t\t\t}\n\t\t}\n\t}\n\tif fresh == 0 {\n\t\treturn 0\n\t}\n\tfor len(q) > 0 {\n\t\tsize := len(q)\n\t\talterado := false\n\t\tfor i := 0; i < size; i++ {\n\t\t\tatual := q[0]\n\t\t\tq = q[1:]\n\n\t\t\tfor _, v := range atual.getNeig() {\n\t\t\t\tif v.l >= 0 && v.l < len(grid) && v.c >= 0 && v.c < len(grid[0]) && grid[v.l][v.c] == 1 {\n\t\t\t\t\tgrid[v.l][v.c] = 2\n\t\t\t\t\tfresh--\n\t\t\t\t\tq = append(q, v)\n\t\t\t\t\talterado = true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tmin++\n\t\tif !alterado {\n\t\t\tmin--\n\t\t\tbreak\n\t\t}\n\t}\n\tif fresh > 0 {\n\t\treturn -1\n\t}\n\treturn min\n}\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m, &n)\n\n\tgrid := make([][]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tgrid[i] = make([]int, n)\n\t\tfor j := 0; j < n; j++ {\n\t\t\tfmt.Scan(&grid[i][j])\n\t\t}\n\t}\n\tfmt.Println(orangesRotting(grid))\n}\n",
+            "lines": "74"
+        }
+    ]
+}

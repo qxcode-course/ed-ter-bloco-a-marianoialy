@@ -19,16 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- eval1@eval1
-- ed@vector
-- ed@linear
-- ed@basic
-- ed@tree
-- ed@list
-- ed@rec
-- ed@backtrack
-- ed@dfs
-- ed@map_set
+- ed@bfs
 flags:
   inbox: all
   panel: skills
@@ -38,5 +29,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@recursao
-selected_index: 18
+selected: ed@rotten
+selected_index: 11
