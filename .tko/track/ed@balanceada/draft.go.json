@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_11-18-14",
+            "content": "@@ -561,135 +561,35 @@\n     \n-s := fmt.Scan(&s)%0A    if balanceado(s)%7B%0A        fmt.Println(%22Balanceado%22)%0A    %7Delse%7B%0A        fmt.Println(%22Nao balanceado%22)%0A    %7D\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-23_11-21-24",
+            "content": "@@ -561,24 +561,12 @@\n     \n-var s string%0A   \n+s :=\n  fmt\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-23_11-21-39",
+            "content": "@@ -263,36 +263,33 @@\n             \n-return false\n+continue \n %0A        %7D%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-23_11-23-04",
+            "content": "@@ -65,19 +65,16 @@\n anceado(\n- s \n string) \n@@ -124,17 +124,16 @@\n  range s\n- \n %7B%0A      \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-23_11-24-08",
+            "content": "@@ -20,17 +20,40 @@\n t (%0A\n-%09%22fmt%22%0A)%0A\n+    %22bufio%22%0A    %22fmt%22%0A    %22os%22%0A)\n %0Afun\n@@ -65,16 +65,17 @@\n anceado(\n+ \n s string\n@@ -80,20 +80,22 @@\n ng) bool\n- \n %7B%0A\n-%09\n+    \n pilha :=\n@@ -109,13 +109,15 @@\n %7B%7D%0A%0A\n-%09\n+    \n for\n- \n _, c\n@@ -130,18 +130,24 @@\n nge s %7B%0A\n-%09%09\n+        \n if c == \n@@ -161,22 +161,30 @@\n c == '%5B'\n- \n %7B%0A\n-%09%09%09\n+            \n pilha = \n@@ -204,26 +204,47 @@\n  c)%0A\n-%09%09%09continue%0A%09%09%7D%0A%09%09\n+            continue%0A        %7D%0A        \n if l\n@@ -257,22 +257,30 @@\n ha) == 0\n- \n %7B%0A\n-%09%09%09\n+            \n return f\n@@ -284,22 +284,34 @@\n n false%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n topo := \n@@ -330,18 +330,24 @@\n lha)-1%5D%0A\n-%09%09\n+        \n pilha = \n@@ -367,14 +367,21 @@\n lha)\n+ \n -1%5D%0A\n-%09%09\n+        \n if c\n@@ -402,22 +402,30 @@\n o == '('\n- \n %7B%0A\n-%09%09%09\n+            \n return f\n@@ -433,14 +433,26 @@\n lse%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n if c\n@@ -477,14 +477,22 @@\n  '%5B'\n- \n %7B%0A\n-%09%09%09\n+            \n retu\n@@ -504,16 +504,28 @@\n lse%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n retu\n@@ -560,17 +560,20 @@\n ain() %7B%0A\n-%09\n+    \n var s st\n@@ -577,17 +577,20 @@\n  string%0A\n-%09\n+    \n fmt.Scan\n@@ -594,17 +594,20 @@\n can(&s)%0A\n-%09\n+    \n if balan\n@@ -614,21 +614,26 @@\n ceado(s)\n- \n %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -654,20 +654,27 @@\n o%22)%0A\n-%09%7D \n+    %7D\n else\n- \n %7B%0A\n-%09%09\n+        \n fmt.\n@@ -703,9 +703,12 @@\n o%22)%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-23_11-24-34",
+            "content": "@@ -355,9 +355,9 @@\n opo \n-!\n+=\n = '%5B\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-23_11-26-34",
+            "content": "@@ -487,17 +487,17 @@\n rintln(%22\n-b\n+B\n alancead\n@@ -525,17 +525,17 @@\n rintln(%22\n-n\n+N\n ao balan\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-23_11-26-51",
+            "content": "@@ -300,17 +300,17 @@\n && topo \n-!\n+=\n = '(' %7B%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-23_11-27-20",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc balanceado(s string) bool {\n\tpilha := []rune{}\n\n\tfor _, c := range s {\n\t\tif c == '(' || c == '[' {\n\t\t\tpilha = append(pilha, c)\n\t\t\tcontinue\n\t\t}\n\t\tif len(pilha) == 0 {\n\t\t\treturn false\n\t\t}\n\t\ttopo := pilha[len(pilha)-1]\n\t\tpilha = pilha[:len(pilha)-1]\n\t\tif c == ')' && topo != '(' {\n\t\t\treturn false\n\t\t}\n\t\tif c == ']' && topo != '[' {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn len(pilha) == 0\n}\n\nfunc main() {\n\tvar s string\n\tfmt.Scan(&s)\n\tif balanceado(s) {\n\t\tfmt.Println(\"balanceado\")\n\t} else {\n\t\tfmt.Println(\"nao balanceado\")\n\t}\n}\n",
+            "lines": "38"
+        }
+    ]
+}
