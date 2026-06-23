@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_16-01-35",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,161 +23,53 @@\n mt%22%0A\n-%0A\n func \n-bloquinhos(n int) int %7B%0A%09if n == 1 %7B%0A%09%09return 20%0A%09%7D%0A%09return bloquinhos(n-1) + 8%0A%7D%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%09fmt.Println(bloquinhos(n)\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-23_16-04-44",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc bloquinhos(n int) int {\n\tif n == 1 {\n\t\treturn 20\n\t}\n\treturn bloquinhos(n-1) + 8\n}\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tfmt.Println(bloquinhos(n))\n}\n",
+            "lines": "15"
+        }
+    ]
+}

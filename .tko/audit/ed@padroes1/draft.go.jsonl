@@ -1,0 +1,4 @@
+{"ts":1782241375,"hash":"28e82cdf544f12fde8ff7a1b35de70a009b75bc484183ab1531171f575e036f9","mode":"full","content":"H4sIAGTYOmoC/ytITM5OTE9VyE3MzOPKzC3ILypRUErLLVHi4korzUtWKEhMKcpPLdYo1oTwQeo0NBWquRSAAKhOL6AoM68kJ09DySM1JydfRyE8vygnRVFJk6uWCwDESvAHXAAAAA=="}
+{"ts":1782241397,"hash":"6323fd82284048ccbb05962a891e4791fe568e119933f8339a491df1181f2c9d","mode":"diff","ops":[{"tag":"replace","a1":3,"a2":4,"text":"func padroes(n int) int{\n    if n == \n}\n"}]}
+{"ts":1782241439,"hash":"76e3c4449713d7a10bf4e44999d6834567b2f63f4db23e0253b0ff5baf29ff43","mode":"diff","ops":[{"tag":"replace","a1":4,"a2":5,"text":"    if n == 1{\n        return 20\n    }\n    return padroes(n-1) + 8 \n"},{"tag":"replace","a1":7,"a2":8,"text":"    var n int\n    fmt.Scan(&n)\n    fmt.Print()\n"}]}
+{"ts":1782241460,"hash":"16a0bf7bcad63bf2c2f710063eb53dfafc0d3277a8e22e88752b6364ae384fab","mode":"diff","ops":[{"tag":"replace","a1":12,"a2":13,"text":"    fmt.Println(bloquinhos(n))\n"}]}

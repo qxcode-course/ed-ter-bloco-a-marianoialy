@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_16-09-25",
+            "content": "@@ -115,124 +115,36 @@\n  %7B%0A%09\n-inicio := 0%0A%09fim := len(slice)%0A%0A%09for inicio %3C= fim %7B%0A%09%09meio := inicio + fim/2%0A%09%09if slice%5Bmeio%5D ==\n+_, _ = slice,\n  value\n- %7B%0A%09%09\n+%0A\n %09return \n meio\n@@ -143,108 +143,9 @@\n urn \n-meio%0A%0A%09%09%7D%0A%09%09if value %3C slice%5Bmeio%5D %7B%0A%09%09%09fim = meio%0A%09%09%7D else %7B%0A%09%09%09inicio = meio%0A%09%09%7D%0A%09%7D%0A%09return inicio\n+0\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-23_16-14-09",
+            "content": "@@ -174,17 +174,16 @@\n meio := \n-(\n inicio +\n@@ -190,12 +190,9 @@\n  fim\n-) / \n+/\n 2%0A%09%09\n@@ -228,24 +228,25 @@\n return meio%0A\n+%0A\n %09%09%7D%0A%09%09if val\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-23_16-15-15",
+            "content": "@@ -284,12 +284,8 @@\n meio\n- - 1\n %0A%09%09%7D\n@@ -312,12 +312,8 @@\n meio\n- + 1\n %0A%09%09%7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-23_16-15-45",
+            "content": "@@ -145,12 +145,8 @@\n ice)\n- - 1\n %0A%0A%09f\n@@ -276,24 +276,28 @@\n %09%09fim = meio\n+ - 1\n %0A%09%09%7D else %7B%0A\n@@ -308,24 +308,28 @@\n nicio = meio\n+ + 1\n %0A%09%09%7D%0A%09%7D%0A%09ret\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-23_16-16-22",
+            "content": "@@ -284,20 +284,16 @@\n m = meio\n- - 1\n %0A%09%09%7D els\n@@ -316,12 +316,8 @@\n meio\n- + 1\n %0A%09%09%7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-23_16-16-57",
+            "content": "@@ -229,75 +229,8 @@\n e %7B%0A\n-%09%09%09for meio %3C len(slice) && slice%5Bmeio%5D == value %7B%0A%09%09%09%09meio++%0A%09%09%09%7D%0A\n %09%09%09r\n@@ -249,20 +249,20 @@\n %09%7D%0A%09%09if \n-slic\n+valu\n e %3C slic\n@@ -280,24 +280,28 @@\n %09%09fim = meio\n+ - 1\n %0A%09%09%7D else %7B%0A\n@@ -312,24 +312,28 @@\n nicio = meio\n+ + 1\n %0A%09%09%7D%0A%09%7D%0A%09ret\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-23_16-21-55",
+            "content": "@@ -316,20 +316,20 @@\n %09%7D%0A%09%09if \n-valu\n+slic\n e %3C slic\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-23_16-22-14",
+            "content": "@@ -267,10 +267,8 @@\n meio\n-+1\n %5D ==\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-23_16-22-32",
+            "content": "@@ -255,32 +255,34 @@\n e) && slice%5Bmeio\n++1\n %5D == value %7B%0A%09%09%09\n@@ -353,20 +353,16 @@\n m = meio\n- - 1\n %0A%09%09%7D els\n@@ -385,12 +385,8 @@\n meio\n- + 1\n %0A%09%09%7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-23_16-22-47",
+            "content": "@@ -267,10 +267,8 @@\n meio\n-+1\n %5D ==\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-23_16-22-58",
+            "content": "@@ -236,18 +236,16 @@\n for meio\n-+1\n  %3C len(s\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-23_16-23-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tinicio := 0\n\tfim := len(slice) - 1\n\n\tfor inicio <= fim {\n\t\tmeio := (inicio + fim) / 2\n\t\tif slice[meio] == value {\n\t\t\tfor meio+1 < len(slice) && slice[meio+1] == value {\n\t\t\t\tmeio++\n\t\t\t}\n\t\t\treturn meio\n\t\t}\n\t\tif value < slice[meio] {\n\t\t\tfim = meio - 1\n\t\t} else {\n\t\t\tinicio = meio + 1\n\t\t}\n\t}\n\treturn inicio\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "46"
+        }
+    ]
+}

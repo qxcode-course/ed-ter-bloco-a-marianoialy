@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_15-52-16",
+            "content": "@@ -101,21 +101,13 @@\n tln(\n-string(\n s%5Bi%5D)\n-)\n %0A%09di\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-23_15-53-14",
+            "content": "@@ -87,55 +87,8 @@\n n%0A%09%7D\n-%0A%0A%09for j := 0; j %3C i; j++ %7B%0A%09%09fmt.Print(%22 %22)%0A%09%7D\n %0A%09fm\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-23_15-54-58",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc diagonal(s string, i int) {\n\tif i == len(s) {\n\t\treturn\n\t}\n\n\tfor j := 0; j < i; j++ {\n\t\tfmt.Print(\" \")\n\t}\n\tfmt.Println(string(s[i]))\n\tdiagonal(s, i+1)\n\n}\n\nfunc main() {\n\tvar s string\n\tfmt.Scan(&s)\n\tdiagonal(s, 0)\n}\n",
+            "lines": "22"
+        }
+    ]
+}

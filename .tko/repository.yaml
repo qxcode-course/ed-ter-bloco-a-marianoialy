@@ -18,24 +18,15 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@linear
-- ed@list
-- ed@backtrack
-- eval1@eval1
-- ed@dfs
-- ed@bfs
-- ed@tree
-- ed@basic
-- ed@rec
+expanded: []
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@diagonal
-selected_index: 24
+selected: ed@vector
+selected_index: 3
